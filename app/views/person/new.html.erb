@@ -1,0 +1,23 @@
+<%= render 'shared/header' %>
+<div class="main-container">
+  <div class="main wrapper clearfix">
+    <br />
+    <%= form_for :person do |f| %>
+        <p>
+          <%= f.label "Ad / Soyad" %><br>
+          <%= f.text_field :name %>
+        </p>
+
+        <p>
+          <%= f.label :email %><br>
+          <%= f.text_field :email %>
+        </p>
+
+        <p>
+          <%= f.submit "Kaydet" %>
+        </p>
+    <% end %>
+  </div>
+</div>
+
+<%= render 'shared/footer' %>
