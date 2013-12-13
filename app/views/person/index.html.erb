@@ -4,40 +4,25 @@
     <div class="main wrapper clearfix">
     <br />
         <ul class="people">
+          <% for person in @persons do %>
             <li class="person">
               <img src="http://www.gravatar.com/avatar/83cfa0588f13658f67feceb3ba1325fe/?s=150" />
               <div class="person-details">
-                <h2>Destan Sarpkaya</h2>
+                <h2><%= person.name %></h2>
                 <div class="social">
-                  <a href="http://dorukdestan.com/blog">
+                  <a href="<%= person.web %>">
                     <i class="fa fa-home fa-lg"></i>
                   </a>
-                  <a href="https://github.com/destan">
+                  <a href="https://github.com/<%= person.github %>">
                     <i class="fa fa-github fa-lg"></i>
                   </a>
-                  <a href="https://twitter.com/dorukdestan">
+                  <a href="https://twitter.com/<%= person.twitter %>">
                     <i class="fa fa-twitter fa-lg"></i>
                   </a>
                 </div>
               </div>
             </li>
-            <li class="person">
-              <img src="http://www.gravatar.com/avatar/7f6186e3d2fde8b2089a7bd235dc0349/?s=150" />
-              <div class="person-details">
-                <h2>Serdar Doğruyol</h2>
-                <div class="social">
-                  <a href="#">
-                    <i class="fa fa-home fa-lg"></i>
-                  </a>
-                  <a href="https://github.com/sdogruyol">
-                    <i class="fa fa-github fa-lg"></i>
-                  </a>
-                  <a href="https://twitter.com/sdogruyol">
-                    <i class="fa fa-twitter fa-lg"></i>
-                  </a>
-                </div>
-              </div>
-            </li>
+          <% end %>
         </ul>
     </div>
 </div> <!-- #main-container -->
