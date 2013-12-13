@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131213201929) do
+ActiveRecord::Schema.define(version: 20131213211058) do
 
   create_table "people", force: true do |t|
     t.string   "name"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20131213201929) do
     t.string   "web"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "gravatar_url"
   end
 
 end
