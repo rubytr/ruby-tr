@@ -8,6 +8,7 @@ RubyTr::Application.routes.draw do
 
   get 'people' => 'person#index', as: :people
   get 'people/new' => 'person#new', as: :new_person
+  post 'people/create' => 'person#create', as: :create_person
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

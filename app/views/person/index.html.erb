@@ -6,7 +6,7 @@
         <ul class="people">
           <% for person in @persons do %>
             <li class="person">
-              <img src="http://www.gravatar.com/avatar/83cfa0588f13658f67feceb3ba1325fe/?s=150" />
+              <img src="<%= person.gravatar_url %>" />
               <div class="person-details">
                 <h2><%= person.name %></h2>
                 <div class="social">
