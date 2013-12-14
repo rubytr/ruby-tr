@@ -25,7 +25,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'gravatar-ultimate'
-gem 'pg'
+
+group :production, :staging do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
 group :development do
   gem 'quiet_assets'
