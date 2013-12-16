@@ -2,7 +2,7 @@
 <div class="main-container">
   <div class="main wrapper clearfix">
     <br />
-    <%= form_for :person, url: create_person_path do |f| %>
+    <%= form_for @person, url: create_person_path do |f| %>
         <p>
           <%= f.label "Ad / Soyad" %><br>
           <%= f.text_field :name %>
@@ -27,6 +27,10 @@
           <%= f.label :twitter %><br>
           <%= f.text_field :twitter %>
         </p>
+
+        <%= f.label :humanizer_answer, @person.humanizer_question %>
+        <%= f.text_field :humanizer_answer %>
+        <%= f.hidden_field :humanizer_question_id %>
 
 
         <p>

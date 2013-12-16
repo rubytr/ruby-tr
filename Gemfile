@@ -27,6 +27,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'gravatar-ultimate'
+gem 'humanizer'
 
 group :production, :staging do
   gem 'pg'

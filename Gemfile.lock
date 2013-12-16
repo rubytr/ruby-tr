@@ -41,6 +41,7 @@ GEM
       activesupport (>= 2.3.14)
       rack
     hike (1.2.3)
+    humanizer (2.6.0)
     i18n (0.6.9)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
@@ -121,6 +122,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   gravatar-ultimate
+  humanizer
   jbuilder (~> 1.2)
   jquery-rails
   pg
