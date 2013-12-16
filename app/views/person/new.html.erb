@@ -27,9 +27,13 @@
           <%= f.label :twitter %><br>
           <%= f.text_field :twitter %>
         </p>
+        <p>
+          <%= f.label :humanizer_answer, @person.humanizer_question %>
+        </p>
+        <p>
+          <%= f.text_field :humanizer_answer %>
+        </p>
 
-        <%= f.label :humanizer_answer, @person.humanizer_question %>
-        <%= f.text_field :humanizer_answer %>
         <%= f.hidden_field :humanizer_question_id %>
 
 
