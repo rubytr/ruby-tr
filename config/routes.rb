@@ -1,14 +1,11 @@
 RubyTr::Application.routes.draw do
-  get "main/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'main#index', as: :root
+  root 'main#index'
 
-  get 'people' => 'person#index', as: :people
-  get 'people/new' => 'person#new', as: :new_person
-  post 'people/create' => 'person#create', as: :create_person
+  resources :people
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
