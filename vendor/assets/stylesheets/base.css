@@ -95,8 +95,8 @@ body {
 }
 
 .title a {
-  text-decoration: none;
-  color: inherit;
+	 text-decoration: none;
+	 color: inherit;
 }
 
 .button {
@@ -108,7 +108,7 @@ body {
 	font-size: 17px;
 	line-height: 13px;
 	text-decoration: none;
-	margin: 10px 0 10px 0;
+	margin: 20px 0 20px 0;
 	border: 1px solid #973329;
 	font-weight: normal;
 	outline: none;
@@ -117,15 +117,21 @@ body {
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
-	-webkit-box-shadow: 0 2px 0 #973329;
-	-moz-box-shadow: 0 2px 0 #973329;
-	box-shadow: 0 2px 0 #973329;
+	-webkit-box-shadow: 0 4px 0 #973329;
+	-moz-box-shadow: 0 4px 0 #973329;
+	box-shadow: 0 4px 0 #973329;
 }
 
 .button:hover { opacity: .9; }
 
-article header h1 {
+.member {
+	width: 49%;
+	margin-left: 1%;
+	float: left;
+}
+article header h1 a {
 	color: #CC342D;
+	text-decoration: none;
 }
 /* ==============
     MOBILE: Menu
@@ -167,12 +173,17 @@ nav a:hover {
 }
 
 .main article h1 {
+    color: #CC342D;
     font-size: 2em;
 }
 
 .main aside {
     color: white;
     padding: 0px 5% 10px;
+}
+
+.main aside h3 {
+	border-bottom: 1px solid silver;
 }
 
 .footer-container footer {
@@ -232,6 +243,11 @@ nav a:hover {
         margin-right: 0;
     }
 
+    .member {
+	width: 19%;
+	margin-left: 1%;
+	float: left;
+}
 /* ========================
     INTERMEDIATE: IE Fixes
    ======================== */
@@ -275,7 +291,7 @@ nav a:hover {
     WIDE: Main
    ============ */
 
-    .main article {
+    .main .index {
         float: left;
         width: 57%;
     }
@@ -429,71 +445,4 @@ nav a:hover {
     h3 {
         page-break-after: avoid;
     }
-}
-
-.main{
-    width: 960px;
-}
-
-.people {
-    margin: 0;
-    padding: 0;
-}
-
-.people .person {
-    float: left;
-    width: 165px;
-    height: 275px;
-    background: white;
-    list-style: none;
-    padding: 0;
-    margin: 0 37.5px 15px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px #d1d1d1;
-}
-
-.people .person img {
-    float: left;
-    width: 165px;
-    height: 165px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    margin: 0 0 5px;
-}
-
-.people .person p {
-    width: 165px;
-    float: left;
-    margin: 10px;
-    padding: 0;
-    font-size: 22px;
-}
-
-.people .person p strong {
-    width: 100%;
-    display: block;
-}
-
-.people .person p a {
-    display: block;
-    color: #4994cf;
-    text-decoration: none;
-    font-size: 16px;
-    margin-bottom: -6px;
-}
-
-.people .person .person-details{
-    padding: 10px;
-    margin: 0 0 5px;
-    text-align: center;
-}
-
-.people .person .person-details .social{
-   margin: 0 auto;
-}
-
-.person-details .social a, .social a:hover{
-    color: #000;
-    border:0px;
-    text-decoration:none;
 }
