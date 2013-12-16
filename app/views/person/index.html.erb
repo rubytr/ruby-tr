@@ -2,32 +2,30 @@
 <%= stylesheet_link_tag "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" %>
 
 <div class="main-container">
-    <div class="main wrapper clearfix">
-      <a class="button" href="people/new">Yeni Kişi Ekle</a>
+  <div class="main wrapper clearfix">
+    <a class="button" href="people/new">Yeni Kişi Ekle</a>
     <br />
     <br />
-        <ul class="people">
-          <% for person in @persons do %>
-            <li class="person">
-              <img src="<%= person.gravatar_url %>" />
-              <div class="person-details">
-                <h2><%= person.name %></h2>
-                <div class="social">
-                  <a href="<%= url_with_protocol person.web %>">
-                    <i class="fa fa-home fa-lg"></i>
-                  </a>
-                  <a href="https://github.com/<%= person.github %>">
-                    <i class="fa fa-github fa-lg"></i>
-                  </a>
-                  <a href="https://twitter.com/<%= person.twitter %>">
-                    <i class="fa fa-twitter fa-lg"></i>
-                  </a>
-                </div>
-              </div>
-            </li>
-          <% end %>
-        </ul>
-    </div>
+    <% for person in @persons do %>
+      <div class="member">
+        <div class="thumbnail">
+          <img src="<%= person.gravatar_url %>?s=250">
+          <div class="caption">
+            <h3><%= person.name %></h3>
+            <a href="http://twitter.com/<%= person.twitter %>">
+              <i class="fa fa-twitter-square"></i>
+            </a>
+            <a href="http://github.com/<%= person.github %>">
+              <i class="fa fa-github"></i>
+            </a>
+            <a href="<%= url_with_protocol person.web%>">
+              <i class="fa fa-bookmark"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div> <!-- #main-container -->
 
 <%= render 'shared/footer' %>
