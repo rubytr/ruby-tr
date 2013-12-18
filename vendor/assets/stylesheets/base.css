@@ -244,9 +244,10 @@ nav a:hover {
     }
 
     .member {
-	width: 19%;
+	width: 32%;
 	margin-left: 1%;
 	float: left;
+	min-height: 20em;
 }
 /* ========================
     INTERMEDIATE: IE Fixes
@@ -300,6 +301,13 @@ nav a:hover {
         float: right;
         width: 28%;
     }
+    .member {
+	width: 19%;
+	margin-left: 1%;
+	float: left;
+	/* min-height: 320px; */
+	min-height: 20em;
+}
 }
 
 @media only screen and (min-width: 1140px) {
