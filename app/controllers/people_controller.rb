@@ -1,4 +1,4 @@
-class PersonController < ApplicationController
+class PeopleController < ApplicationController
 
   def index
     @persons = Person.all
@@ -17,7 +17,7 @@ class PersonController < ApplicationController
   private
 
   def person_params
-    params.require(:person).permit(:name, :email, :web, :github, :twitter, :humanizer_answer, :humanizer_question_id)
+    params.require(:people).permit(:name, :email, :web, :github, :twitter, :humanizer_answer, :humanizer_question_id)
   end
 
 end
