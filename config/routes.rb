@@ -6,9 +6,7 @@ RubyTr::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'main#index', as: :root
 
-  get 'people' => 'people#index', as: :people
-  get 'people/new' => 'people#new', as: :new_person
-  post 'people/create' => 'people#create', as: :create_person
+  resources :people, only: [:index, :new, :create]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -44,7 +42,7 @@ RubyTr::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
