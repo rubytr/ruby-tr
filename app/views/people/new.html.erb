@@ -2,7 +2,7 @@
 <div class="main-container">
   <div class="main wrapper clearfix">
     <br />
-    <%= form_for @person, url: create_person_path do |f| %>
+    <%= form_for @person do |f| %>
         <p>
           <%= f.label :name, 'Ad soyad' %><br>
           <%= f.text_field :name %>
@@ -36,9 +36,8 @@
 
         <%= f.hidden_field :humanizer_question_id %>
 
-
         <p>
-          <%= f.submit "Kaydet" %>
+          <%= f.submit 'Kaydet' %>
         </p>
     <% end %>
   </div>
