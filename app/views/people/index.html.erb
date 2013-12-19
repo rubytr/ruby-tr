@@ -3,7 +3,7 @@
 
 <div class="main-container">
   <div class="main wrapper clearfix">
-    <a class="button" href="people/new">Yeni Kişi Ekle</a>
+    <%= link_to('Yeni Kişi Ekle', new_person_path, class: 'button') %>
     <br />
     <br />
     <% for person in @persons do %>
