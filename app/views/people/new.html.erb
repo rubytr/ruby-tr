@@ -4,34 +4,44 @@
     <br />
     <%= form_for @person do |f| %>
         <p>
-          <%= f.label :name, 'Ad soyad' %><br>
+          <%= f.label :name %><br>
           <%= f.text_field :name %>
+          <% if @person.errors.has_key?(:name) %>
+            <%= @person.errors[:name].join(',') %>
+          <% end %>
         </p>
 
         <p>
           <%= f.label :email %><br>
           <%= f.text_field :email %>
+          <% if @person.errors.has_key?(:email) %>
+            <%= @person.errors[:email].join(',') %>
+          <% end %>
         </p>
 
         <p>
-          <%= f.label :web, 'Blog' %><br>
+          <%= f.label :web %><br>
           <%= f.text_field :web %>
         </p>
 
         <p>
-          <%= f.label :github, 'Github kullanıcı adı' %><br>
+          <%= f.label :github %><br>
           <%= f.text_field :github %>
         </p>
 
         <p>
-          <%= f.label :twitter, 'Twitter kullanıcı adı' %><br>
+          <%= f.label :twitter %><br>
           <%= f.text_field :twitter %>
         </p>
+
         <p>
           <%= f.label :humanizer_answer, @person.humanizer_question %>
         </p>
         <p>
           <%= f.text_field :humanizer_answer %>
+          <% if @person.errors.has_key?(:humanizer_answer) %>
+            <%= @person.errors[:humanizer_answer].join(',') %>
+          <% end %>
         </p>
 
         <%= f.hidden_field :humanizer_question_id %>
