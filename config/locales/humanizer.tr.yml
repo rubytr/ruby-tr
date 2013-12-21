@@ -11,10 +11,10 @@ tr:
         answers: ["10", "on"]
       - question: "Diziyi takip eden sayıyı bulun: 10, 11, 12, 13, 14, ?"
         answers: ["15", "onbeş", "on beş"]
-      - question: "5 * 5 = ?"
+      - question: "5 x 5 = ?"
         answers: ["25", "yirmibeş", "yirmi beş"]
       - question: "10 / 2 = ?"
-        answers: ["5", "five"]
+        answers: ["5", "beş"]
       - question: "Pazartesinden sonra hangi gün gelir?"
         answer: "Salı"
       - question: "Yılın en son ayı hangisidir?"
