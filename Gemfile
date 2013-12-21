@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -28,6 +28,9 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'gravatar-ultimate'
 gem 'humanizer'
+# gem 'flutie' # https://github.com/thoughtbot/flutie
+gem 'high_voltage' # https://github.com/thoughtbot/high_voltage
+gem 'thin'
 
 group :production, :staging do
   gem 'pg'
@@ -38,12 +41,16 @@ group :development do
   gem 'quiet_assets'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
 end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
