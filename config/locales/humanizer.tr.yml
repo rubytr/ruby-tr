@@ -22,20 +22,28 @@ tr:
       - question: "Bir saat kaç dakikadır?"
         answers: ["60", "altmış"]
       - question: "İstanbul'un plaka kodu?"
-        answer: ["34", "otuz dört", "otuzdört"]
+        answers: ["34", "otuz dört", "otuzdört"]
       - question: "Bodrum ve Marmaris gibi turistik şehirleriyle bilinen ilimiz?"
-        answer: ["Muğla", "Mugla"]
+        answers: ["Muğla", "Mugla"]
       - question: "Türkiye'nin başkenti?"
         answer: "Ankara"
       - question: "Microsoft'un meşhur internet tarayıcsının adı (i... e...)?"
         answers: ["ie", "explorer", "internet explorer"]
       - question: "Dünyanın en büyük arama motoru ?"
-        answers: "Google"
+        answer: "Google"
       - question: "Google'ın geliştirdiği web tarayıcsı?"
-        answer: ["chrome", "google chrome"]
+        answers: ["chrome", "google chrome"]
       - question: "Avrupa Birliği (AB) üyesi bir ülke adı (A...) ?"
-        answer: ["Almanya", "Avusturya" ]
+        answers: ["Almanya", "Avusturya" ]
       - question: "Spor Toto Süper Ligi (futbol) son şampiyonu (G...)?"
         answers: ["gs", "Galatasaray"]
       - question: "Ziraat Türkiye Kupası (futbol) son şampiyonu (F...)?"
         answers: ["fb", "Fenerbahçe"]
+      - question: "Ruby'nin anavatanı olan ülke?"
+        answers:  %w(japonya japan jpn jp) #["japonya", "japan", "jpn", "jp"]
+      - question: "Ruby'nin Java implementasyonu/versiyonu?"
+        answer: "jruby"
+      - question: "Ruby/Rails uygulamalarını yüklediğimiz/deploy ettiğimiz site? (H...)"  
+        answers: %w(heroku heroku.com) # ["heroku", "heroku.com"]
+      - question: "Ruby kodlarını konsoldan interaktif olarak çalıştırabildiğimiz program?"
+        answers: %w(irb interactive-ruby-shell) # ["irb", "interactive-ruby-shell"]

@@ -3,18 +3,30 @@
 <div class="main-container">
   <div class="main wrapper clearfix">
     <div class="index">
+
       <article>
         <header>
-          <h1>Hakkımızda sayfası güncellenmiştir</h1>
+          <h2>Mail grubumuz ve IRC kanalımız hakkında...</h2>
         </header>
         <section>
-          Topluluğumuz üyelerini bulabileceğiniz sayfamız güncellenmiş olup, <%= link_to 'buradan', people_path %> erişebilirsiniz.
+          <p>Topluluğumuz Google mail grubuna ve IRC kanalına (#ruby-tr) artık sitemiz üzerinden ulaşabilirsiniz. Üstteki linklerden mail grubumuza ya da IRC kanalımıza kolayca erişebilirsiniz.</p>
         </section>
       </article>
 
       <article>
         <header>
-          <h1>Ruby Türkiye Sitesi Yayında</h1>
+          <h2>Hakkımızda sayfası güncellenmiştir</h2>
+        </header>
+        <section>
+          <p>
+            Topluluğumuz üyelerini bulabileceğiniz sayfamız güncellenmiş olup, <%= link_to 'buradan', people_path %> erişebilirsiniz.    
+          </p>
+        </section>
+      </article>
+
+      <article>
+        <header>
+          <h2>Ruby Türkiye Sitesi Yayında</h2>
         </header>
         <section>
         <p>Ruby Türkiye topluluğu olarak sitemiz yayına girmiş bulunmaktadır. Uzun süredir yayına almak istediğimiz bu site, soğuk bir kış akşamı sıcak bir muhabbet ortamı yakaladığımız IRC kanalında
@@ -32,9 +44,9 @@
       kapımız açıktır.
 
       <h3>Nasıl iletişim kurabilirim?</h3>
-      <ul>
-        <li>#ruby-tr (IRC/freenode)</li>
-        <li>Ruby Türkiye google grubu</li>
+      <ul class="connect-links">
+        <li><%= link_to "#ruby-tr (IRC/freenode)", page_path("irc") %></li>
+        <li><%= link_to "Ruby Türkiye google mail grubu", page_path("group") %></li>
       </ul>
 
       <h3>Nasıl yardım alabilirim?</h3>
