@@ -18,37 +18,37 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 3.0.4'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+gem 'turbolinks', '~> 2.1.0'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder', '~> 1.5.3'
 
-gem 'gravatar-ultimate'
-gem 'humanizer'
+gem 'gravatar-ultimate', '~> 2.0.0'
+gem 'humanizer', '~> 2.6.0'
 # gem 'flutie' # https://github.com/thoughtbot/flutie
-gem 'high_voltage' # https://github.com/thoughtbot/high_voltage
-gem 'thin'
+gem 'high_voltage', '~> 2.0.0' # https://github.com/thoughtbot/high_voltage
+gem 'thin', '~> 1.6.1'
 
 group :production, :staging do
-  gem 'pg'
-  gem 'rails_12factor'
+  gem 'pg', '~> 0.17.1'
+  gem 'rails_12factor', '~> 0.0.2'
 end
 
 group :development do
-  gem 'quiet_assets'
+  gem 'quiet_assets', '~> 1.0.2'
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'meta_request'
+  gem 'sqlite3', '~> 1.3.8'
+  gem 'better_errors', '~> 1.0.1'
+  gem 'binding_of_caller', '~> 0.7.2'
+  gem 'meta_request', '~> 0.2.8'
 end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+  gem 'sdoc', '~> 0.3.20', require: false
 end
 
 
