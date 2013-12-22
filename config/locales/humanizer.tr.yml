@@ -40,10 +40,10 @@ tr:
       - question: "Ziraat Türkiye Kupası (futbol) son şampiyonu (F...)?"
         answers: ["fb", "Fenerbahçe"]
       - question: "Ruby'nin anavatanı olan ülke?"
-        answers:  %w(japonya japan jpn jp) #["japonya", "japan", "jpn", "jp"]
+        answers: ["japonya", "japan", "jpn", "jp"]
       - question: "Ruby'nin Java implementasyonu/versiyonu?"
         answer: "jruby"
       - question: "Ruby/Rails uygulamalarını yüklediğimiz/deploy ettiğimiz site? (H...)"  
-        answers: %w(heroku heroku.com) # ["heroku", "heroku.com"]
+        answers: ["heroku", "heroku.com"]
       - question: "Ruby kodlarını konsoldan interaktif olarak çalıştırabildiğimiz program?"
-        answers: %w(irb interactive-ruby-shell) # ["irb", "interactive-ruby-shell"]
+        answers: ["irb", "interactive-ruby-shell"]
