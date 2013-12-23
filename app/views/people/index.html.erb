@@ -12,13 +12,13 @@
           <img src="<%= person.gravatar_url %>?s=250">
           <div class="caption">
             <h3><%= person.name %></h3>
-            <a href="http://twitter.com/<%= person.twitter %>">
+            <a href="http://twitter.com/<%= person.twitter %>" target="_blank">
               <i class="fa fa-twitter-square"></i>
             </a>
-            <a href="http://github.com/<%= person.github %>">
+            <a href="http://github.com/<%= person.github %>" target="_blank">
               <i class="fa fa-github"></i>
             </a>
-            <a href="<%= url_with_protocol person.web%>">
+            <a href="<%= url_with_protocol person.web%>" target="_blank">
               <i class="fa fa-bookmark"></i>
             </a>
           </div>
