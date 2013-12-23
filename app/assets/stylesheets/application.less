@@ -4,6 +4,10 @@
 @import "app/assets/stylesheets/config";
 @import "app/assets/stylesheets/responsive";
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: @font-family;
   margin: 0;
@@ -65,6 +69,24 @@ header {
     }
   }
 
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -80px;
+  padding: 0 0 80px;
+}
+
+#footer {
+  border-top: 20px solid @inverse;
+  background-color: @base;
+  color: @light;
+  height: 80px;
+
+  p {
+    margin-top: 20px;
+  }
 }
 
 .footer-container,
