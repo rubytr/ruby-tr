@@ -1,0 +1,370 @@
+@import "font-awesome";
+@import "twitter/bootstrap";
+
+@import "app/assets/stylesheets/config";
+@import "app/assets/stylesheets/responsive";
+
+body {
+  font-family: @font-family;
+  margin: 0;
+  text-size-adjust:none;
+  font-smoothing: antialiased;
+  -webkit-text-size-adjust:none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+header {
+  background: @base;
+  border-bottom: 20px solid @inverse;
+
+  h1#logo {
+    color: @light;
+    font-size: 30px;
+    line-height: normal;
+    font-weight: bold;
+    float: left;
+    margin: 20px 0;
+
+    a {
+      text-decoration: none;
+      color: @light;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  nav {
+    float: right;
+
+    ul {
+      list-style-type: none;
+
+      li {
+        float: left;
+      }
+
+      li > a {
+        display: block;
+        line-height: 90px;
+        padding: 0 25px;
+        background: @inverse;
+        color: @light;
+        margin-left: 10px;
+        font-weight: bold;
+        font-size: 18px;
+
+        &:hover {
+          text-decoration: none;
+          color: @lightgray;
+
+        }
+      }
+    }
+  }
+
+}
+
+.footer-container,
+.main aside {
+    border-top: 20px solid #CC342D;
+}
+
+.header-container,
+.footer-container,
+.main aside {
+    background: #585450;
+}
+
+
+.button {
+  -webkit-appearance: none;
+  display: inline-block;
+  background: #bc3f33;
+  color: #fff;
+  padding: 13px 19px;
+  font-size: 17px;
+  line-height: 13px;
+  text-decoration: none;
+  margin: 20px 0 20px 0;
+  border: 1px solid #973329;
+  font-weight: normal;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 4px 0 #973329;
+  -moz-box-shadow: 0 4px 0 #973329;
+  box-shadow: 0 4px 0 #973329;
+}
+
+.button:hover { opacity: .9; }
+
+.member {
+  width: 49%;
+  margin-left: 1%;
+  float: left;
+}
+article header h1 a {
+  color: #CC342D;
+  text-decoration: none;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+.main {
+    padding: 30px 0;
+}
+
+.main article h1 {
+    color: #CC342D;
+    font-size: 2em;
+}
+
+.main aside {
+    color: white;
+    padding: 0px 5% 10px;
+}
+
+.main aside h3 {
+  border-bottom: 1px solid silver;
+}
+
+.footer-container footer {
+    color: white;
+    padding: 20px 0;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+
+    .member {
+  width: 32%;
+  margin-left: 1%;
+  float: left;
+  min-height: 20em;
+}
+/* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+    .header-container,
+    .main aside {
+        -webkit-box-shadow: 0 5px 10px #aaa;
+           -moz-box-shadow: 0 5px 10px #aaa;
+                box-shadow: 0 5px 10px #aaa;
+    }
+
+/* ============
+    WIDE: Menu
+   ============ */
+
+
+/* ============
+    WIDE: Main
+   ============ */
+
+    .main .index {
+        float: left;
+        width: 57%;
+    }
+
+    .main aside {
+        float: right;
+        width: 28%;
+    }
+    .member {
+  width: 19%;
+  margin-left: 1%;
+  float: left;
+  /* min-height: 320px; */
+  min-height: 20em;
+}
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+    .wrapper {
+        width: 1026px; /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* ekrems.css additional rulez */
+
+ul.connect-links li{
+    list-style: none;
+}
+
+ul.connect-links li a, ul.connect-links li a:hover{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}

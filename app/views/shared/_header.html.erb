@@ -1,20 +1,19 @@
-<div class="header-container">
-  <header class="wrapper clearfix">
-    <h1 class="title">
-      <a href="/">
-        <%= image_tag "logo.png" %> Türkiye
-      </a>
-    </h1>
-    <nav>
-      <ul>
-        <li><a href="/people">Topluluk</a></li>
-        <li><%= link_to "Mail Grubu", page_path("group") %></li>
-        <li><%= link_to "#ruby-tr IRC", page_path("irc") %></li>
-        <!--
-        <li><a href="sunumlar.html">Sunumlar</a></li>
-        <li><a href="ilanlar.html">İlanlar</a></li>
-        -->
-      </ul>
-    </nav>
-  </header>
-</div>
+<header>
+  <div class="container">
+      <h1 id="logo">
+        <a href="/">
+          <%= image_tag "logo.png" %> <span>Türkiye</span>
+        </a>
+      </h1>
+
+      <nav>
+        <ul>
+          <li><a href="/people">Topluluk</a></li>
+          <li><%= link_to "Mail Grubu", page_path("group") %></li>
+          <li><%= link_to "#ruby-tr IRC", page_path("irc") %></li>
+        </ul>
+      </nav>
+    
+  </div>
+  <!--/ .container -->
+</header>
