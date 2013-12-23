@@ -1,31 +1,39 @@
-<%= render 'shared/header' %>
-<%= stylesheet_link_tag "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" %>
+<div class="content">
+  <div class="container">
+    <div class="page-actions">
+      <h2 class="pull-left">Topluluk</h2>
+      <%= link_to('Yeni Kişi Ekle', new_person_path, class: 'btn btn-lg btn-success') %>  
+    </div>
+    <!--/ .page-actions -->
+    
+    <div class="row">
+      <% @persons.each do |item| %>
+        <div class="col-md-2">
+          <div class="thumbnail">
+            <img src="<%= item.gravatar_url %>?s=250">
+            <h3><%= item.name %></h3>
 
-<div class="main-container">
-  <div class="main wrapper clearfix">
-    <%= link_to('Yeni Kişi Ekle', new_person_path, class: 'button') %>
-    <br />
-    <br />
-    <% for person in @persons do %>
-      <div class="member">
-        <div class="thumbnail">
-          <img src="<%= person.gravatar_url %>?s=250">
-          <div class="caption">
-            <h3><%= person.name %></h3>
-            <a href="http://twitter.com/<%= person.twitter %>" target="_blank">
-              <i class="fa fa-twitter-square"></i>
-            </a>
-            <a href="http://github.com/<%= person.github %>" target="_blank">
-              <i class="fa fa-github"></i>
-            </a>
-            <a href="<%= url_with_protocol person.web%>" target="_blank">
-              <i class="fa fa-bookmark"></i>
-            </a>
+            <div class="social">
+              <a href="http://twitter.com/<%= item.twitter %>" class="btn btn-default btn-twitter" target="_blank" title="Twitter">
+                <i class="fa fa-twitter"></i>
+              </a>
+
+              <a href="http://github.com/<%= item.github %>" class="btn btn-default btn-github" target="_blank" title="GitHub">
+                <i class="fa fa-github"></i>
+              </a>
+
+              <a href="<%= url_with_protocol item.web%>" class="btn btn-default" target="_blank" title="Blog">
+                <i class="fa fa-bookmark"></i>
+              </a>
+            </div>
           </div>
+          <!--/ .thumbnail -->
         </div>
-      </div>
-    <% end %>
-  </div>
-</div> <!-- #main-container -->
+      <% end %>
+    </div>
+    <!--/ .row -->
 
-<%= render 'shared/footer' %>
+  </div>
+  <!--/ .container -->
+</div>
+<!--/ .content -->

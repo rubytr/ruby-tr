@@ -1,0 +1,185 @@
+@import "font-awesome";
+@import "twitter/bootstrap";
+
+@import "app/assets/stylesheets/config";
+@import "app/assets/stylesheets/responsive";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: @font-family;
+  margin: 0;
+  text-size-adjust:none;
+  font-smoothing: antialiased;
+  -webkit-text-size-adjust:none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+}
+
+header {
+  background: @base;
+  border-bottom: 20px solid @inverse;
+
+  h1#logo {
+    color: @light;
+    font-size: 30px;
+    line-height: normal;
+    font-weight: bold;
+    float: left;
+    margin: 20px 0;
+
+    a {
+      text-decoration: none;
+      color: @light;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  nav {
+    float: right;
+
+    ul {
+      list-style-type: none;
+
+      li {
+        float: left;
+      }
+
+      li > a {
+        display: block;
+        line-height: 90px;
+        padding: 0 25px;
+        background: @inverse;
+        color: @light;
+        margin-left: 10px;
+        font-weight: bold;
+        font-size: 18px;
+
+        &:hover {
+          text-decoration: none;
+          color: @lightgray;
+
+        }
+      }
+    }
+  }
+
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -80px;
+  padding: 0 0 80px;
+}
+
+.content {
+  margin: 25px 0;
+
+  h2 {
+    line-height: normal;
+    margin: 10px 0 20px 0;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.6em;
+    color: @copy;
+    margin-bottom: 20px;
+  }
+
+  aside {
+    padding: 25px;
+    background-color: @base;
+    border-top: 20px solid @inverse;
+
+    h3 {
+      color: @light;
+      line-height: normal;
+      margin: 0 0 15px 0;
+      padding: 0;
+    }
+
+    p {
+      font-style: italic;
+      color: @light;
+      line-height: 1.7em;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin-bottom: 15px;
+
+      li {
+        margin-bottom: 5px;
+      }
+    }
+
+    a {
+      font-weight: bold;
+      border-bottom: 1px solid @light;
+      color: @light;
+      text-decoration: none;
+    }
+
+    .btn {
+      border-bottom: none;
+    }
+  }
+
+  .page-actions {
+    text-align: right;
+    margin-bottom: 25px;
+  }
+
+  .thumbnail {
+
+    h3 {
+      color: @base;
+      line-height: normal;
+      margin: 10px 5px;
+      padding: 0;
+      font-size: 18px;
+    }
+
+    .social {
+      padding: 0 5px;
+      margin-bottom: 10px;
+
+      .btn-twitter {
+        background-color: @twitter;
+        color: @light;
+      }
+
+      .btn-github {
+        background-color: @github;
+        color: @light;
+      }
+    }
+  }
+
+  em.error {
+    color: @inverse;
+    display: block;
+    margin-top: 10px;
+  }
+}
+
+#footer {
+  border-top: 20px solid @inverse;
+  background-color: @base;
+  color: @light;
+  height: 80px;
+
+  p {
+    margin-top: 20px;
+  }
+}
