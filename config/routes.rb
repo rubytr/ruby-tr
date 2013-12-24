@@ -9,6 +9,8 @@ RubyTr::Application.routes.draw do
 
   resources :people, only: [:index, :new, :create]
 
+  resources :companies
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
