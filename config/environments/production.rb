@@ -14,7 +14,7 @@ RubyTr::Application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
   #Fix for Heroku asset compile
-  config.assets.initialize_on_precompile = true
+  #config.assets.initialize_on_precompile = true
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
@@ -61,7 +61,7 @@ RubyTr::Application.configure do
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-  config.assets.precompile += %w( *.css *.js )
+  #config.assets.precompile += %w( *.css *.js )
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
