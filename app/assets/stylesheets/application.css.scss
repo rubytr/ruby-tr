@@ -25,7 +25,7 @@ header {
   border-bottom: 20px solid $inverse;
 
   h1#logo {
-    color: @light;
+    color: $light;
     font-size: 30px;
     line-height: normal;
     font-weight: bold;
@@ -34,7 +34,7 @@ header {
 
     a {
       text-decoration: none;
-      color: @light;
+      color: $light;
 
       img {
         margin-right: 10px;
@@ -56,15 +56,15 @@ header {
         display: block;
         line-height: 90px;
         padding: 0 25px;
-        background: @inverse;
-        color: @light;
+        background: $inverse;
+        color: $light;
         margin-left: 10px;
         font-weight: bold;
         font-size: 18px;
 
         &:hover {
           text-decoration: none;
-          color: @lightgray;
+          color: $lightgray;
 
         }
       }
@@ -91,17 +91,17 @@ header {
   p {
     font-size: 18px;
     line-height: 1.6em;
-    color: @copy;
+    color: $copy;
     margin-bottom: 20px;
   }
 
   aside {
     padding: 25px;
-    background-color: @base;
-    border-top: 20px solid @inverse;
+    background-color: $base;
+    border-top: 20px solid $inverse;
 
     h3 {
-      color: @light;
+      color: $light;
       line-height: normal;
       margin: 0 0 15px 0;
       padding: 0;
@@ -109,7 +109,7 @@ header {
 
     p {
       font-style: italic;
-      color: @light;
+      color: $light;
       line-height: 1.7em;
       margin-bottom: 15px;
     }
@@ -124,8 +124,8 @@ header {
 
     a {
       font-weight: bold;
-      border-bottom: 1px solid @light;
-      color: @light;
+      border-bottom: 1px solid $light;
+      color: $light;
       text-decoration: none;
     }
 
@@ -142,7 +142,7 @@ header {
   .thumbnail {
 
     h3 {
-      color: @base;
+      color: $base;
       line-height: normal;
       margin: 10px 5px;
       padding: 0;
@@ -154,28 +154,28 @@ header {
       margin-bottom: 10px;
 
       .btn-twitter {
-        background-color: @twitter;
-        color: @light;
+        background-color: $twitter;
+        color: $light;
       }
 
       .btn-github {
-        background-color: @github;
-        color: @light;
+        background-color: $github;
+        color: $light;
       }
     }
   }
 
   em.error {
-    color: @inverse;
+    color: $inverse;
     display: block;
     margin-top: 10px;
   }
 }
 
 #footer {
-  border-top: 20px solid @inverse;
-  background-color: @base;
-  color: @light;
+  border-top: 20px solid $inverse;
+  background-color: $base;
+  color: $light;
   height: 80px;
 
   p {
