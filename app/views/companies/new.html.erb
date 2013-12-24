@@ -1,0 +1,52 @@
+<div class="content">
+  <div class="container">
+    <h2>Yeni Kişi Kaydı</h2>
+    
+    <div class="row">
+      <div class="col-md-5">
+        
+        <%= form_for @company do |f| %>
+          <div class="form-group">
+            <%= f.label :name %><br>
+            <%= f.text_field :name, class: "form-control" %>
+            <% if @company.errors.has_key?(:name) %>
+              <em class="error"><%= @company.errors[:name].join(',') %></em>
+            <% end %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :web %><br>
+            <%= f.text_field :web, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :city %><br>
+            <%= f.text_field :city, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :humanizer_answer, @company.humanizer_question %>
+          </div>
+
+          <div class="form-group">
+            <%= f.text_field :humanizer_answer, class: "form-control" %>
+            <% if @company.errors.has_key?(:humanizer_answer) %>
+              <%= @company.errors[:humanizer_answer].join(',') %>
+            <% end %>
+          </div>
+
+          <%= f.hidden_field :humanizer_question_id %>
+
+          <div class="form-group">
+            <%= f.submit 'Kaydet', class: "btn btn-success" %>
+          </div>
+        <% end %>
+
+      </div>
+    </div>
+    <!--/ .row -->
+
+  </div>
+  <!--/ .container -->
+</div>
+<!--/ .content -->
