@@ -13,6 +13,8 @@ RubyTr::Application.configure do
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
+  #Fix for Heroku asset compile
+  config.assets.initialize_on_precompile = true
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
