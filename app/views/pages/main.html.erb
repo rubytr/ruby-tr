@@ -1,63 +1,51 @@
-<%= render "shared/header" %>
+<div class="content">
 
-<div class="main-container">
-  <div class="main wrapper clearfix">
-    <div class="index">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h2>Mail grubumuz ve IRC kanalımız hakkında...</h2>
+        <p>
+          Topluluğumuz Google mail grubuna ve IRC kanalına (#ruby-tr) artık sitemiz üzerinden ulaşabilirsiniz. Üstteki linklerden mail grubumuza ya da IRC kanalımıza kolayca erişebilirsiniz.
+        </p>
 
-      <article>
-        <header>
-          <h2>Mail grubumuz ve IRC kanalımız hakkında...</h2>
-        </header>
-        <section>
-          <p>Topluluğumuz Google mail grubuna ve IRC kanalına (#ruby-tr) artık sitemiz üzerinden ulaşabilirsiniz. Üstteki linklerden mail grubumuza ya da IRC kanalımıza kolayca erişebilirsiniz.</p>
-        </section>
-      </article>
+        <h2>Hakkımızda sayfası güncellenmiştir</h2>
+        <p>
+          Topluluğumuz üyelerini bulabileceğiniz sayfamız güncellenmiş olup, <%= link_to 'buradan', people_path %> erişebilirsiniz.    
+        </p>
 
-      <article>
-        <header>
-          <h2>Hakkımızda sayfası güncellenmiştir</h2>
-        </header>
-        <section>
+        <h2>Ruby Türkiye Sitesi Yayında!</h2>
+        <p>
+          Ruby Türkiye topluluğu olarak sitemiz yayına girmiş bulunmaktadır. Uzun süredir yayına almak istediğimiz bu site, soğuk bir kış akşamı sıcak bir muhabbet ortamı yakaladığımız IRC kanalında bir anda hayata geçmeye başlamış ve çok kısa bir süre içinde tamamlanmıştır :) 
+        </p>
+      </div>
+      <!--/ .col-md-8 -->
+
+      <div class="col-md-4">
+        <aside>
+          <h3>Ruby Türkiye nedir?</h3>
           <p>
-            Topluluğumuz üyelerini bulabileceğiniz sayfamız güncellenmiş olup, <%= link_to 'buradan', people_path %> erişebilirsiniz.    
+            Türkiye'deki Ruby programcıları ve Ruby severler topluluğudur. Ruby ile program yazan ve ilgilenen herkese kapımız açıktır.
           </p>
-        </section>
-      </article>
 
-      <article>
-        <header>
-          <h2>Ruby Türkiye Sitesi Yayında</h2>
-        </header>
-        <section>
-        <p>Ruby Türkiye topluluğu olarak sitemiz yayına girmiş bulunmaktadır. Uzun süredir yayına almak istediğimiz bu site, soğuk bir kış akşamı sıcak bir muhabbet ortamı yakaladığımız IRC kanalında
-        bir anda hayata geçmeye başlamış ve çok kısa bir süre içinde tamamlanmıştır :) </p>
+          <h3>Nasıl iletişim kurabilirim?</h3>
+          <ul class="connect-links">
+            <li><%= link_to "#ruby-tr (IRC/freenode)", page_path("irc") %></li>
+            <li><%= link_to "Ruby Türkiye google mail grubu", page_path("group") %></li>
+          </ul>
 
-        <p>Bu site tamamen GitHub üzerinde geliştirilmektedir. Eklemek istediğiniz birşey veya önerileriniz varsa <a href="https://github.com/rubytr/ruby-tr">GitHub adresimiz.</a> </p>
-        </section>
-      </article>
+          <h3>Nasıl yardım alabilirim?</h3>
+          <p>
+            IRC kanalımızda veya mail listemizde sorularınızı paylaşabilirsiniz.
+          </p>
+
+          <a class="btn btn-default btn-warning btn-lg btn-block" href="https://groups.google.com/forum/#!forum/ruby-tr">Mail Listemize Kaydolun!</a>
+        </aside>
+      </div>
+      <!--/ .col-md-4 -->
     </div>
+    <!--/ .row -->
+  </div>
+  <!--/ .container -->
 
-    <aside>
-      <h3>Ruby Türkiye nedir?</h3>
-      Türkiye'deki Ruby programcıları ve Ruby severler
-      topluluğudur. Ruby ile program yazan ve ilgilenen herkese
-      kapımız açıktır.
-
-      <h3>Nasıl iletişim kurabilirim?</h3>
-      <ul class="connect-links">
-        <li><%= link_to "#ruby-tr (IRC/freenode)", page_path("irc") %></li>
-        <li><%= link_to "Ruby Türkiye google mail grubu", page_path("group") %></li>
-      </ul>
-
-      <h3>Nasıl yardım alabilirim?</h3>
-      IRC kanalımızda veya mail listemizde sorularınızı paylaşabilirsiniz.
-
-      <center>
-        <a class="button" href="https://groups.google.com/forum/#!forum/ruby-tr">Mail Listemize Kaydolun!</a>
-      </center>
-    </aside>
-
-  </div> <!-- #main -->
-</div> <!-- #main-container -->
-
-<%= render 'shared/footer' %>
+</div>
+<!--/ .content -->

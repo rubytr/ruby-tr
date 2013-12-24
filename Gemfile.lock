@@ -32,6 +32,8 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.0.3.0)
+      sass (~> 3.2)
     builder (3.1.4)
     callsite (0.0.11)
     coderay (1.1.0)
@@ -47,6 +49,8 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.0.2)
+    font-awesome-sass (4.0.2)
+      sass-rails (>= 3.1.1)
     gravatar-ultimate (2.0.0)
       activesupport (>= 2.3.14)
       rack
@@ -143,7 +147,9 @@ PLATFORMS
 DEPENDENCIES
   better_errors (~> 1.0.1)
   binding_of_caller (~> 0.7.2)
+  bootstrap-sass (~> 3.0.3.0)
   coffee-rails (~> 4.0.0)
+  font-awesome-sass
   gravatar-ultimate (~> 2.0.0)
   high_voltage (~> 2.0.0)
   humanizer (~> 2.6.0)
