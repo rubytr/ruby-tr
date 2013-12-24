@@ -140,6 +140,7 @@ header {
   }
 
   .thumbnail {
+    min-height: 280px;
 
     h3 {
       color: $base;
