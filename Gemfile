@@ -3,15 +3,13 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'rails', '4.0.2'
-gem 'less'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
-gem 'therubyracer', platforms: :ruby
-gem 'font-awesome-less'
-gem 'less-rails-bootstrap'
+# gem 'therubyracer', platforms: :ruby
+gem 'font-awesome-sass'
+gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'jquery-rails'
-gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'gravatar-ultimate'
