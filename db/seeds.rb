@@ -5,3 +5,17 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Company.delete_all
+
+companies = Company.create(
+    [
+      {id: 1, name: 'Enkuba', city: 'Istanbul', web: 'http://www.enkuba.com'},
+      {id: 2, name: 'Yeni Hayat', city: 'Istanbul', web: 'http://www.yh.com.tr'},
+      {id: 3, name: 'CloudArena', city: 'Istanbul', web: 'http://www.cloudarena.com'},
+      {id: 4, name: 'Promoqube', city: 'Istanbul', web: 'http://www.promoqube.com'},
+      {id: 5, name: 'İdemama', city: 'Istanbul', web: 'http://www.idemama.com'},
+      {id: 6, name: 'KodGemisi', city: 'İzmir', web: 'http://www.kodgemisi.com'},
+      {id: 7, name: 'Lab2023', city: 'Denizli', web: 'http://www.lab2023.com'}      
+    ]
+  )

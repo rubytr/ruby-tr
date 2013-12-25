@@ -1,0 +1,12 @@
+<div class="content">
+  <div class="container">
+    <h1>Şirketler</h1>
+    <ul>
+      <% @companies.each do |c| %>
+        <li><%= c.name %> <%= link_to c.web, c.web, target: '_blank' %></li>
+      <% end %>
+    </ul>
+    <%= link_to('Şirket Ekle', new_company_path, class: 'btn btn-lg btn-success') %>  
+  </div>
+</div>
+
