@@ -2,10 +2,10 @@
   <div class="container">
     <div class="page-actions">
       <h2 class="pull-left">Topluluk</h2>
-      <%= link_to('Yeni Kişi Ekle', new_person_path, class: 'btn btn-lg btn-success') %>  
+      <%= link_to('Yeni Kişi Ekle', new_person_path, class: 'btn btn-lg btn-success') %>
     </div>
     <!--/ .page-actions -->
-    
+
     <div class="row">
       <% @persons.each do |item| %>
         <div class="col-md-2">
@@ -14,17 +14,23 @@
             <h3><%= item.name %></h3>
 
             <div class="social">
-              <a href="http://twitter.com/<%= item.twitter %>" class="btn btn-default btn-twitter" target="_blank" title="Twitter">
-                <i class="fa fa-twitter"></i>
-              </a>
+              <% if item.twitter? %>
+                <a href="http://twitter.com/<%= item.twitter %>" class="btn btn-default btn-twitter" target="_blank" title="Twitter">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              <% end %>
 
-              <a href="http://github.com/<%= item.github %>" class="btn btn-default btn-github" target="_blank" title="GitHub">
-                <i class="fa fa-github"></i>
-              </a>
+              <% if item.github? %>
+                <a href="http://github.com/<%= item.github %>" class="btn btn-default btn-github" target="_blank" title="GitHub">
+                  <i class="fa fa-github"></i>
+                </a>
+              <% end %>
 
-              <a href="<%= url_with_protocol item.web%>" class="btn btn-default" target="_blank" title="Blog">
-                <i class="fa fa-bookmark"></i>
-              </a>
+              <% if item.web? %>
+                <a href="<%= url_with_protocol item.web %>" class="btn btn-default" target="_blank" title="Blog">
+                  <i class="fa fa-bookmark"></i>
+                </a>
+              <% end %>
             </div>
           </div>
           <!--/ .thumbnail -->
