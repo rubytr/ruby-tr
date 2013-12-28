@@ -81,7 +81,7 @@ header {
 }
 
 .content {
-  margin: 25px 0;
+  margin: 25px auto 10px;
 
   h2 {
     line-height: normal;
@@ -182,4 +182,8 @@ header {
   p {
     margin-top: 20px;
   }
+}
+
+.about{
+  max-width: 960px;
 }
