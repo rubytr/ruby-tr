@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.1.0'
 
 gem 'rails', '4.0.2'
 gem 'sass-rails', '~> 4.0.0'
@@ -12,7 +12,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails', '~> 3.0.4'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks', '~> 2.1.0'
+gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.5.3'
@@ -22,7 +22,7 @@ gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'gravatar-ultimate', '~> 2.0.0'
 gem 'humanizer', '~> 2.6.0'
 # gem 'flutie' # https://github.com/thoughtbot/flutie
-gem 'high_voltage', '~> 2.0.0' # https://github.com/thoughtbot/high_voltage
+gem 'high_voltage' # https://github.com/thoughtbot/high_voltage
 gem 'thin', '~> 1.6.1'
 
 group :production, :staging do
@@ -39,11 +39,9 @@ group :development do
   gem 'meta_request', '~> 0.2.8'
 end
 
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', '~> 0.3.20', require: false
-end
-
+gem 'omniauth'
+gem 'omniauth-github'
+gem "octokit", "~> 2.0"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
