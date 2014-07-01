@@ -1,6 +1,7 @@
 @import "font-awesome";
+@import "bootswatch/united/variables";
 @import "bootstrap";
-
+@import "bootswatch/united/bootswatch";
 @import "config";
 
 html, body {
@@ -8,7 +9,7 @@ html, body {
 }
 
 body {
-  font-family: $font-family;
+  // font-family: $font-family;
   margin: 0;
   text-size-adjust:none;
   font-smoothing: antialiased;
