@@ -1,27 +1,19 @@
 source 'https://rubygems.org'
 
-ruby '2.1.0'
+ruby '2.1.1'
 
-gem 'rails', '4.0.2'
+gem 'rails', ' ~> 4.1.2'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
-# gem 'therubyracer', platforms: :ruby
-
-# Use jquery as the JavaScript library
 gem 'jquery-rails', '~> 3.0.4'
-
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.5.3'
 gem 'font-awesome-sass'
-gem 'bootstrap-sass', '~> 3.0.3.0'
-
+gem 'bootstrap-sass', '~> 3.2'
 gem 'gravatar-ultimate', '~> 2.0.0'
 gem 'humanizer', '~> 2.6.0'
-# gem 'flutie' # https://github.com/thoughtbot/flutie
+
 gem 'high_voltage' # https://github.com/thoughtbot/high_voltage
 gem 'thin', '~> 1.6.1'
 
@@ -31,6 +23,7 @@ group :production, :staging do
 end
 
 group :development do
+  gem 'spring'
   gem 'quiet_assets', '~> 1.0.2'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.3.8'
@@ -42,16 +35,3 @@ end
 gem 'omniauth'
 gem 'omniauth-github'
 gem "octokit", "~> 2.0"
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
