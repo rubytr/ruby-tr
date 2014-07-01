@@ -13,7 +13,7 @@ gem 'font-awesome-sass'
 gem 'bootstrap-sass', '~> 3.2'
 gem 'gravatar-ultimate', '~> 2.0.0'
 gem 'humanizer', '~> 2.6.0'
-
+gem 'jquery-rails-cdn'
 gem 'high_voltage' # https://github.com/thoughtbot/high_voltage
 gem 'thin', '~> 1.6.1'
 
@@ -31,7 +31,3 @@ group :development do
   gem 'binding_of_caller', '~> 0.7.2'
   gem 'meta_request', '~> 0.2.8'
 end
-
-gem 'omniauth'
-gem 'omniauth-github'
-gem "octokit", "~> 2.0"
