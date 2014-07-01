@@ -1,6 +1,7 @@
 @import "font-awesome";
+@import "bootswatch/united/variables";
 @import "bootstrap";
-
+@import "bootswatch/united/bootswatch";
 @import "config";
 
 html, body {
@@ -8,7 +9,7 @@ html, body {
 }
 
 body {
-  font-family: $font-family;
+  // font-family: $font-family;
   margin: 0;
   text-size-adjust:none;
   font-smoothing: antialiased;
@@ -21,11 +22,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-  background: $base;
+  background: $light;
   border-bottom: 20px solid $inverse;
 
   h1#logo {
-    color: $light;
     font-size: 30px;
     line-height: normal;
     font-weight: bold;
@@ -34,7 +34,7 @@ header {
 
     a {
       text-decoration: none;
-      color: $light;
+      color: $inverse;
 
       img {
         margin-right: 10px;
@@ -97,11 +97,15 @@ header {
 
   aside {
     padding: 25px;
-    background-color: $base;
+    background-color: $light;
     border-top: 20px solid $inverse;
+    border-left: 1px solid $inverse;
+    border-right: 1px solid $inverse;
+    border-bottom: 1px solid $inverse;
+    color: $inverse;
+
 
     h3 {
-      color: $light;
       line-height: normal;
       margin: 0 0 15px 0;
       padding: 0;
@@ -109,7 +113,6 @@ header {
 
     p {
       font-style: italic;
-      color: $light;
       line-height: 1.7em;
       margin-bottom: 15px;
     }
@@ -124,8 +127,7 @@ header {
 
     a {
       font-weight: bold;
-      border-bottom: 1px solid $light;
-      color: $light;
+      border-bottom: 1px solid $inverse;
       text-decoration: none;
     }
 
@@ -175,11 +177,11 @@ header {
 
 #footer {
   border-top: 20px solid $inverse;
-  background-color: $base;
-  color: $light;
-  height: 80px;
+  background-color: $light;
+  color: $inverse;
+  height: 60px;
 
   p {
-    margin-top: 20px;
+    margin-top: 10px;
   }
 }
