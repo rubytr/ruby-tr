@@ -17,6 +17,7 @@ gem 'humanizer', '~> 2.6.0'
 gem 'jquery-rails-cdn'
 gem 'high_voltage'
 gem 'thin', '~> 1.6.1'
+gem 'rack-google-analytics'
 
 group :production, :staging do
   gem 'pg', '~> 0.17.1'

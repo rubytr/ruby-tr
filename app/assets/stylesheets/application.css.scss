@@ -17,7 +17,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-
 #wrap {
   min-height: 100%;
   height: auto;
@@ -32,8 +31,7 @@ body {
       font-size: 30px;
       line-height: normal;
       font-weight: bold;
-      float: left;
-      margin: 20px 0;
+      margin: 15px 0;
 
       a {
         text-decoration: none;
@@ -46,7 +44,6 @@ body {
     }
 
     nav {
-      float: right;
 
       ul {
         list-style-type: none;
@@ -57,7 +54,7 @@ body {
 
         li > a {
           display: block;
-          line-height: 90px;
+          line-height: 80px;
           padding: 0 25px;
           background: $inverse;
           color: $light;

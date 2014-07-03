@@ -87,6 +87,9 @@ GEM
     rack (1.5.2)
     rack-contrib (1.1.0)
       rack (>= 0.9.1)
+    rack-google-analytics (1.1.0)
+      actionpack
+      activesupport
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.1.4)
@@ -164,6 +167,7 @@ DEPENDENCIES
   meta_request (~> 0.3)
   pg (~> 0.17.1)
   quiet_assets (~> 1.0.2)
+  rack-google-analytics
   rails (~> 4.1.4)
   rails_12factor (~> 0.0.2)
   sass-rails (~> 4.0.0)
