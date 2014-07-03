@@ -9,7 +9,6 @@ html, body {
 }
 
 body {
-  // font-family: $font-family;
   margin: 0;
   text-size-adjust:none;
   font-smoothing: antialiased;
@@ -18,66 +17,76 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-h1, h2, h3, h4, h5, h6 {
-}
-
-header {
-  background: $light;
-  border-bottom: 20px solid $inverse;
-
-  h1#logo {
-    font-size: 30px;
-    line-height: normal;
-    font-weight: bold;
-    float: left;
-    margin: 20px 0;
-
-    a {
-      text-decoration: none;
-      color: $inverse;
-
-      img {
-        margin-right: 10px;
-      }
-    }
-  }
-
-  nav {
-    float: right;
-
-    ul {
-      list-style-type: none;
-
-      li {
-        float: left;
-      }
-
-      li > a {
-        display: block;
-        line-height: 90px;
-        padding: 0 25px;
-        background: $inverse;
-        color: $light;
-        margin-left: 10px;
-        font-weight: bold;
-        font-size: 18px;
-
-        &:hover {
-          text-decoration: none;
-          color: $lightgray;
-
-        }
-      }
-    }
-  }
-
-}
 
 #wrap {
   min-height: 100%;
   height: auto;
   margin: 0 auto -80px;
-  padding: 0 0 80px;
+  padding: 0 0 20px;
+
+  header {
+    background: $light;
+    border-bottom: 20px solid $inverse;
+
+    h1#logo {
+      font-size: 30px;
+      line-height: normal;
+      font-weight: bold;
+      float: left;
+      margin: 20px 0;
+
+      a {
+        text-decoration: none;
+        color: $inverse;
+
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    nav {
+      float: right;
+
+      ul {
+        list-style-type: none;
+
+        li {
+          float: left;
+        }
+
+        li > a {
+          display: block;
+          line-height: 90px;
+          padding: 0 25px;
+          background: $inverse;
+          color: $light;
+          margin-left: 10px;
+          font-weight: bold;
+          font-size: 18px;
+
+          &:hover {
+            text-decoration: none;
+            color: $lightgray;
+
+          }
+        }
+      }
+    }
+  }
+
+
+  footer {
+    border-top: 20px solid $inverse;
+    background-color: $light;
+    color: $inverse;
+    height: 60px;
+
+    p {
+      margin-top: 10px;
+    }
+  }
+
 }
 
 .content {
@@ -171,17 +180,6 @@ header {
   em.error {
     color: $inverse;
     display: block;
-    margin-top: 10px;
-  }
-}
-
-#footer {
-  border-top: 20px solid $inverse;
-  background-color: $light;
-  color: $inverse;
-  height: 60px;
-
-  p {
     margin-top: 10px;
   }
 }

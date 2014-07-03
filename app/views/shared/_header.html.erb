@@ -1,19 +1,14 @@
-<header>
-  <div class="container">
-      <h1 id="logo">
-        <a href="/">
-          <%= image_tag "logo.png" %> <span>Ruby Türkiye</span>
-        </a>
-      </h1>
-
-      <nav>
-        <ul>
-          <li><%= link_to "Topluluk", people_path %></li>
-          <li><%= link_to "Mail Grubu", page_path("group") %></li>
-          <li><%= link_to "#ruby-tr IRC", page_path("irc") %></li>
-        </ul>
-      </nav>
-
-  </div>
-  <!--/ .container -->
-</header>
+<div class="container">
+  <h1 id="logo">
+    <a href="/">
+      <%= image_tag "logo.png" %> <span>Ruby Türkiye</span>
+    </a>
+  </h1>
+  <nav>
+    <ul>
+      <li><a href="/people">Topluluk</a></li>
+      <li><%= link_to "Mail Grubu", page_path("group") %></li>
+      <li><%= link_to "#ruby-tr IRC", page_path("irc") %></li>
+    </ul>
+  </nav>
+</div>

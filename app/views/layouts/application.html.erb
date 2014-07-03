@@ -10,10 +10,15 @@
   </head>
   <body>
     <div id="wrap">
-      <%= render 'shared/header' %>
-      <%= yield %>
+      <header>
+        <%= render 'shared/header' %>
+      </header>
+      <div id="main">
+        <%= yield %>
+      </div>
+      <footer>
+        <%= render 'shared/footer' %>
+      </footer>
     </div>
-    <!--/ #wrap -->
-    <%= render 'shared/footer' %>
   </body>
 </html>
