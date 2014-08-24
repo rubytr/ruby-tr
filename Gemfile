@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.1'
 
-gem 'rails', ' ~> 4.1.2'
+gem 'rails', ' ~> 4.1.4'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -25,6 +25,14 @@ end
 
 group :development, :test do
   gem 'sqlite3', '~> 1.3.8'
+  gem 'rspec-rails', '~> 2.99.0'
+  gem 'guard'
+  gem 'guard-rspec', '~> 3.0.2'
+  gem 'guard-spork'
+  gem 'spork', '~> 1.0rc'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'shoulda'
 end
 
 group :development do
