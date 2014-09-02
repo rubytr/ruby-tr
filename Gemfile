@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.1'
+ruby '2.1.2'
 
 gem 'rails', ' ~> 4.1.4'
 gem 'sass-rails', '~> 4.0.0'
@@ -18,7 +18,7 @@ gem 'jquery-rails-cdn'
 gem 'high_voltage' # https://github.com/thoughtbot/high_voltage
 gem 'thin', '~> 1.6.1'
 
-group :production, :staging do
+group :production do
   gem 'pg', '~> 0.17.1'
   gem 'rails_12factor', '~> 0.0.2'
 end
