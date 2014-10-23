@@ -1,18 +1,21 @@
-<div id="footer">
+<footer class="animated fadeIn">
   <div class="container">
-    <p class="pull-left">&copy; <%= Time.now.year %> - Ruby Türkiye</p>
+    <div class="row gutter-20-xs gutter-out-xs left-lg">
+      <div class="lg-2-1">&copy; <%= Time.now.year %> - Ruby Türkiye</div>
+      <div class="lg-2-1"></div>
+    </div>
   </div>
-  <%= jquery_include_tag :google %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-XXXXX-X']);
-    _gaq.push(['_trackPageview']);
+</footer>
+<%= jquery_include_tag :google %>
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-XXXXX-X']);
+  _gaq.push(['_trackPageview']);
 
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-</div>
+  (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>

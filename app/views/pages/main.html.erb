@@ -1,51 +1,45 @@
-<div class="content">
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <h2>Mail grubumuz ve IRC kanalımız hakkında...</h2>
+<div class="container">
+  <div class="row gutter-20-xs gutter-out-xs left-xs">
+    <div class="xl-12-8 lg-12-7">
+      <div class="news">
+        <h2>Mail grubumuz ve IRC kanalımız hakkında</h2>
         <p>
           Topluluğumuz Google mail grubuna ve IRC kanalına (#ruby-tr) artık sitemiz üzerinden ulaşabilirsiniz. Üstteki linklerden mail grubumuza ya da IRC kanalımıza kolayca erişebilirsiniz.
         </p>
-
+      </div>
+      <div class="news">
         <h2>Hakkımızda sayfası güncellenmiştir</h2>
         <p>
-          Topluluğumuz üyelerini bulabileceğiniz sayfamız güncellenmiş olup, <%= link_to 'buradan', people_path %> erişebilirsiniz.    
+          Topluluğumuz üyelerini bulabileceğiniz sayfamız güncellenmiş olup, <%= link_to 'buradan', people_path %> erişebilirsiniz.
         </p>
-
-        <h2>Ruby Türkiye Sitesi Yayında!</h2>
+      </div>
+      <div class="news">
+        <h2>Ruby Türkiye sitesi yayında</h2>
         <p>
-          Ruby Türkiye topluluğu olarak sitemiz yayına girmiş bulunmaktadır. Uzun süredir yayına almak istediğimiz bu site, soğuk bir kış akşamı sıcak bir muhabbet ortamı yakaladığımız IRC kanalında bir anda hayata geçmeye başlamış ve çok kısa bir süre içinde tamamlanmıştır :) 
+          Ruby Türkiye topluluğu olarak sitemiz yayına girmiş bulunmaktadır. Uzun süredir yayına almak istediğimiz bu site, soğuk bir kış akşamı sıcak bir muhabbet ortamı yakaladığımız IRC kanalında bir anda hayata geçmeye başlamış ve çok kısa bir süre içinde tamamlanmıştır :)
         </p>
       </div>
-      <!--/ .col-md-8 -->
-
-      <div class="col-md-4">
-        <aside>
-          <h3>Ruby Türkiye nedir?</h3>
-          <p>
-            Türkiye'deki Ruby programcıları ve Ruby severler topluluğudur. Ruby ile program yazan ve ilgilenen herkese kapımız açıktır.
-          </p>
-
-          <h3>Nasıl iletişim kurabilirim?</h3>
-          <ul class="connect-links">
-            <li><%= link_to "#ruby-tr (IRC/freenode)", page_path("irc") %></li>
-            <li><%= link_to "Ruby Türkiye google mail grubu", page_path("group") %></li>
-          </ul>
-
-          <h3>Nasıl yardım alabilirim?</h3>
-          <p>
-            IRC kanalımızda veya mail listemizde sorularınızı paylaşabilirsiniz.
-          </p>
-
-          <a class="btn btn-default btn-warning btn-lg btn-block" href="https://groups.google.com/forum/#!forum/ruby-tr">Mail Listemize Kaydolun!</a>
-        </aside>
-      </div>
-      <!--/ .col-md-4 -->
     </div>
-    <!--/ .row -->
-  </div>
-  <!--/ .container -->
+    <div class="xl-12-4 lg-12-5">
+      <aside>
+        <h3>Ruby Türkiye nedir ?</h3>
+        <p>
+          Türkiye'deki Ruby programcıları ve Ruby severler topluluğudur. Ruby ile program yazan ve ilgilenen herkese kapımız açıktır.
+        </p>
 
+        <h3>Nasıl iletişim kurabilirim ?</h3>
+        <ul class="connect-links">
+          <li><%= link_to "#ruby-tr (IRC/freenode)", page_path("irc") %></li>
+          <li><%= link_to "Ruby Türkiye google mail grubu", page_path("group") %></li>
+        </ul>
+
+        <h3>Nasıl yardım alabilirim ?</h3>
+        <p>
+          IRC kanalımızda veya mail listemizde sorularınızı paylaşabilirsiniz.
+        </p>
+
+        <a class="btn" href="https://groups.google.com/forum/#!forum/ruby-tr"><i class="fa fa-envelope"></i> Mail Listemize Kaydolun!</a>
+      </aside>
+    </div>
+  </div>
 </div>
-<!--/ .content -->

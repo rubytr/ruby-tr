@@ -10,6 +10,7 @@ gem 'jquery-rails', '~> 3.0.4'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.5.3'
 gem 'font-awesome-sass'
+gem "font-awesome-rails"
 gem 'bootstrap-sass', '~> 3.2'
 gem 'bootswatch-rails'
 gem 'gravatar-ultimate', '~> 2.0.0'

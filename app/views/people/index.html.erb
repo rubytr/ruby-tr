@@ -1,39 +1,32 @@
-<div class="content">
-  <div class="container">
-    <div class="page-actions">
-      <h2 class="pull-left">Topluluk</h2>
-      <%= link_to('Yeni Kişi Ekle', new_person_path, class: 'btn btn-lg btn-success') %>  
+<div class="container">
+  <div class="row gutter-20-xs gutter-out-xs center-lg">
+    <div class="xs-1 left-lg">
+      <div class="page-header">
+        <h2>Topluluk</h2>
+      </div>
     </div>
-    <!--/ .page-actions -->
-    
-    <div class="row">
-      <% @persons.each do |item| %>
-        <div class="col-md-2">
-          <div class="thumbnail">
-            <img src="<%= item.gravatar_url %>?s=250">
-            <h3><%= item.name %></h3>
-
-            <div class="social">
-              <a href="http://twitter.com/<%= item.twitter %>" class="btn btn-default btn-twitter" target="_blank" title="Twitter">
-                <i class="fa fa-twitter"></i>
-              </a>
-
-              <a href="http://github.com/<%= item.github %>" class="btn btn-default btn-github" target="_blank" title="GitHub">
-                <i class="fa fa-github"></i>
-              </a>
-
-              <a href="<%= url_with_protocol item.web%>" class="btn btn-default" target="_blank" title="Blog">
-                <i class="fa fa-bookmark"></i>
-              </a>
+    <div class="lg-12-3">
+      <%= link_to(('<i class="fa fa-plus-square"></i> Yeni Kişi Ekle').html_safe, new_person_path, class: 'btn') %>
+      <br/>
+    </div>
+  </div>
+  <div class="row gutter-20-xs gutter-out-xs center-lg">
+    <div class="xs-1">
+      <div class="row gutter-10-xs center-lg">
+        <% @persons.each do |item| %>
+          <div class="lg-3-1 md-2-1">
+            <div class="thumbnail">
+              <div class="image-circle">
+                <img src="<%= item.gravatar_url %>?s=250" width="125">
+              </div>
+              <h3><%= item.name %></h3>
+              <a href="http://twitter.com/<%= item.twitter %>" class="link" target="_blank" title="Twitter"><i class="fa fa-twitter fa-2x"></i></a>
+              <a href="http://github.com/<%= item.github %>" class="link" target="_blank" title="GitHub"><i class="fa fa-github  fa-2x"></i></a>
+              <a href="<%= url_with_protocol item.web%>" class="link" target="_blank" title="Blog"><i class="fa fa-bookmark fa-2x"></i></a>
             </div>
           </div>
-          <!--/ .thumbnail -->
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
-    <!--/ .row -->
-
   </div>
-  <!--/ .container -->
 </div>
-<!--/ .content -->
