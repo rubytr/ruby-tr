@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Ruby Türkiye</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-  <%= stylesheet_link_tag "application", media: "all" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <%= render 'shared/header' %>
-  <%= yield %>
-  <%= render 'shared/footer' %>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>Ruby Türkiye</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag "application", media: "all" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= render 'shared/header' %>
+    <%= yield %>
+    <%= render 'shared/footer' %>
+  </body>
 </html>
