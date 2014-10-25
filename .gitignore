@@ -16,3 +16,5 @@
 /tmp
 .DS_Store
 .idea/
+.rspec
+vendor/bundle

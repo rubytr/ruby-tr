@@ -1,65 +1,68 @@
-<div class="content">
-  <div class="container">
-    <h2>Yeni Kişi Kaydı</h2>
-    
-    <div class="row">
-      <div class="col-md-5">
-        
+<div class="container">
+  <div class="row gutter-20-xs gutter-out-xs left-lg">
+    <div class="xs-1">
+      <div class="page-header">
+        <h2>Yeni Kişi Kaydı</h2>
+      </div>
+
         <%= form_for @person do |f| %>
-          <div class="form-group">
-            <%= f.label :name %><br>
-            <%= f.text_field :name, class: "form-control" %>
-            <% if @person.errors.has_key?(:name) %>
-              <em class="error"><%= @person.errors[:name].join(',') %></em>
-            <% end %>
+          <div class="row gutter-20-xs left-lg">
+            <div class="lg-12-3 form-title">
+              <%= f.label :name %>
+            </div>
+            <div class="lg-12-5">
+              <%= f.text_field :name, class: "form-control" %>
+              <% if @person.errors.has_key?(:name) %>
+                <em class="error"><%= @person.errors[:name].join(',') %></em>
+              <% end %>
+            </div>
           </div>
 
-          <div class="form-group">
-            <%= f.label :email %><br>
-            <%= f.text_field :email, class: "form-control" %>
-            <% if @person.errors.has_key?(:email) %>
-              <em class="error"><%= @person.errors[:email].join(',') %></em>
-            <% end %>
+          <div class="row gutter-20-xs left-lg">
+            <div class="lg-12-3 form-title">
+              <%= f.label :email %>
+            </div>
+            <div class="lg-12-5">
+              <%= f.text_field :email, class: "form-control" %>
+              <% if @person.errors.has_key?(:email) %>
+                <em class="error"><%= @person.errors[:email].join(',') %></em>
+              <% end %>
+            </div>
           </div>
 
-          <div class="form-group">
-            <%= f.label :web %><br>
-            <%= f.text_field :web, class: "form-control" %>
+          <div class="row gutter-20-xs left-lg">
+            <div class="lg-12-3 form-title"><%= f.label :web %></div>
+            <div class="lg-12-5"><%= f.text_field :web, class: "form-control" %></div>
           </div>
 
-          <div class="form-group">
-            <%= f.label :github %><br>
-            <%= f.text_field :github, class: "form-control" %>
+          <div class="row gutter-20-xs left-lg">
+            <div class="lg-12-3 form-title"><%= f.label :github %></div>
+            <div class="lg-12-2"><%= f.text_field :github, class: "form-control" %></div>
           </div>
 
-          <div class="form-group">
-            <%= f.label :twitter %><br>
-            <%= f.text_field :twitter, class: "form-control" %>
+          <div class="row gutter-20-xs left-lg">
+            <div class="lg-12-3 form-title"><%= f.label :twitter %></div>
+            <div class="lg-12-2"><%= f.text_field :twitter, class: "form-control" %></div>
           </div>
 
-          <div class="form-group">
-            <%= f.label :humanizer_answer, @person.humanizer_question %>
-          </div>
-
-          <div class="form-group">
-            <%= f.text_field :humanizer_answer, class: "form-control" %>
-            <% if @person.errors.has_key?(:humanizer_answer) %>
-              <%= @person.errors[:humanizer_answer].join(',') %>
-            <% end %>
+          <div class="row gutter-20-xs left-lg">
+            <div class="lg-12-3 form-title"><%= f.label :humanizer_answer, @person.humanizer_question %></div>
+            <div class="lg-12-5">
+              <%= f.text_field :humanizer_answer, class: "form-control" %>
+              <% if @person.errors.has_key?(:humanizer_answer) %>
+                <%= @person.errors[:humanizer_answer].join(',') %>
+              <% end %>
+            </div>
           </div>
 
           <%= f.hidden_field :humanizer_question_id %>
 
-          <div class="form-group">
-            <%= f.submit 'Kaydet', class: "btn btn-success" %>
+          <div class="row gutter-20-xs left-lg">
+            <div class="lg-12-3 form-title"></div>
+            <div class="lg-12-5"><%= f.submit 'Kaydet', class: "btn" %></div>
           </div>
         <% end %>
 
-      </div>
     </div>
-    <!--/ .row -->
-
   </div>
-  <!--/ .container -->
 </div>
-<!--/ .content -->

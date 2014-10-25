@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.1'
+ruby '2.1.2'
 
 gem 'rails', ' ~> 4.1.4'
 gem 'sass-rails', '~> 4.0.0'
@@ -10,6 +10,7 @@ gem 'jquery-rails', '~> 3.1.1'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.1'
 gem 'font-awesome-sass'
+gem "font-awesome-rails"
 gem 'bootstrap-sass', '~> 3.2'
 gem 'bootswatch-rails'
 gem 'gravatar-ultimate', '~> 2.0.0'
@@ -19,13 +20,21 @@ gem 'high_voltage'
 gem 'thin', '~> 1.6.1'
 gem 'rack-google-analytics'
 
-group :production, :staging do
+group :production do
   gem 'pg', '~> 0.17.1'
   gem 'rails_12factor', '~> 0.0.2'
 end
 
 group :development, :test do
-  gem 'sqlite3', '~> 1.3.9'
+  gem 'sqlite3', '~> 1.3.8'
+  gem 'rspec-rails', '~> 2.99.0'
+  gem 'guard'
+  gem 'guard-rspec', '~> 3.0.2'
+  gem 'guard-spork'
+  gem 'spork', '~> 1.0rc'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'shoulda'
 end
 
 group :development do
