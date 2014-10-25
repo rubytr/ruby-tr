@@ -237,7 +237,14 @@
    color: #555555;
   }
 
-/* Responsive */
+@-moz-document url-prefix() {
+  .connect-links li a{
+    margin-top: -20px;
+    margin-left: 15px;
+  }
+}
+
+  /* Responsive */
 
   /* lg */
 
