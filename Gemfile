@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.2'
+ruby '2.1.3'
 
 gem 'rails', ' ~> 4.1.4'
 gem 'sass-rails', '~> 4.0.0'
@@ -35,6 +35,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'shoulda'
+  gem 'faker', require: false
 end
 
 group :development do
