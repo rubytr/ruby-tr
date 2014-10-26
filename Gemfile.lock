@@ -63,6 +63,8 @@ GEM
     factory_girl_rails (4.4.1)
       factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
+    faker (1.4.3)
+      i18n (~> 0.5)
     ffi (1.9.3)
     font-awesome-rails (4.2.0.0)
       railties (>= 3.2, < 5.0)
@@ -225,6 +227,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   database_cleaner
   factory_girl_rails
+  faker
   font-awesome-rails
   font-awesome-sass
   gravatar-ultimate (~> 2.0.0)
