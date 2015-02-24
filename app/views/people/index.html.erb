@@ -6,26 +6,16 @@
       </div>
     </div>
     <div class="lg-12-3">
-      <%= link_to(('<i class="fa fa-plus-square"></i> Yeni Kişi Ekle').html_safe, new_person_path, class: 'btn') %>
+      <%= link_to new_person_path, class: "btn" do %>
+        <i class="fa fa-plus-square"></i> Yeni Kişi Ekle
+      <% end %>
       <br/>
     </div>
   </div>
   <div class="row gutter-20-xs gutter-out-xs center-lg">
     <div class="xs-1">
       <div class="row gutter-10-xs center-lg">
-        <% @persons.each do |item| %>
-          <div class="xl-4-1 lg-3-1 md-2-1">
-            <div class="thumbnail">
-              <div class="image-circle">
-                <img src="<%= item.gravatar_url %>?s=250" width="125">
-              </div>
-              <h3><%= item.name %></h3>
-              <a href="http://twitter.com/<%= item.twitter %>" class="link" target="_blank" title="Twitter"><i class="fa fa-twitter fa-2x"></i></a>
-              <a href="http://github.com/<%= item.github %>" class="link" target="_blank" title="GitHub"><i class="fa fa-github  fa-2x"></i></a>
-              <a href="<%= url_with_protocol item.web%>" class="link" target="_blank" title="Blog"><i class="fa fa-bookmark fa-2x"></i></a>
-            </div>
-          </div>
-        <% end %>
+        <%= render @people %>
       </div>
     </div>
   </div>
