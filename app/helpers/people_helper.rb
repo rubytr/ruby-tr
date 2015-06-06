@@ -6,4 +6,16 @@ module PeopleHelper
       "#"
     end
   end
+
+	def gravatar_picture person
+		image_tag "#{person.gravatar_url}?s=250", width: "125"
+	end
+
+	def twitter_url person
+		"http://twitter.com/#{person.twitter}"
+	end
+
+	def github_url person
+		"http://github.com/#{person.github}"
+	end
 end
