@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.2.2'
+
 gem 'rails', ' ~> 4.2.1'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
@@ -15,7 +17,7 @@ gem 'gravatar-ultimate', '~> 2.0.0'
 gem 'humanizer', '~> 2.6.0'
 gem 'jquery-rails-cdn'
 gem 'high_voltage' # https://github.com/thoughtbot/high_voltage
-gem 'thin', '~> 1.6.1'
+gem 'puma'
 
 group :production do
   gem 'pg', '~> 0.17.1'
@@ -25,10 +27,6 @@ end
 group :development, :test do
   gem 'sqlite3', '~> 1.3.8'
   gem 'rspec-rails', '~> 2.99.0'
-  gem 'guard'
-  gem 'guard-rspec', '~> 3.0.2'
-  gem 'guard-spork'
-  gem 'spork', '~> 1.0rc'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'shoulda'
