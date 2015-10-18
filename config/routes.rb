@@ -1,4 +1,6 @@
 RubyTr::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   # get "main/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -8,6 +10,8 @@ RubyTr::Application.routes.draw do
   root to: 'high_voltage/pages#show', id: 'main', as: :root
 
   resources :people, only: [:index, :new, :create]
+
+  resources :jobs, only: [:index, :new, :create, :show]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

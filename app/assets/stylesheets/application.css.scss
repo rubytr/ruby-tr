@@ -114,6 +114,17 @@
     margin: 5px 0;
     border-radius: 3px;
   }
+
+textarea {
+  width: 100%;
+  border:1px solid #e8e8e8;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 3px;
+  min-height: 150px;
+  resize: none;
+}
+
   .form-title{
     margin: 15px 0;
   }
@@ -147,6 +158,18 @@
     margin: 10px 0;
     font-weight: normal;
 
+  }
+
+  .list-item {
+    border-radius: 3px;
+    border: 1px solid #e8e8e8;
+    background: #f5f5f5;
+    padding: 12px;
+    margin: 10px;
+  }
+
+  .list-item h3 {
+    -webkit-margin-before: 0;
   }
 
 /* Footer */
