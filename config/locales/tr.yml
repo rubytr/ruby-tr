@@ -198,4 +198,10 @@ tr:
         web: Blog
         github: GitHub kullanıcı adı
         twitter: Twitter kullanıcı adı
+      job:
+        title: Başlık
+        company: Şirket
+        description: Açıklama
+        link: Başvuru Bağlantısı
+        location: Konum
 

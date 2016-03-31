@@ -18,6 +18,8 @@ gem 'humanizer', '~> 2.6.0'
 gem 'jquery-rails-cdn'
 gem 'high_voltage'
 gem 'puma'
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise'
 
 group :production do
   gem 'pg', '~> 0.17.1'
