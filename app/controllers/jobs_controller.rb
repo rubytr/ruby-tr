@@ -1,7 +1,7 @@
 class JobsController < ApplicationController
 
   def index
-    @jobs = Job.all
+    @jobs = Job.where(published: true)
   end
 
   def new
