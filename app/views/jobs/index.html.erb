@@ -3,6 +3,9 @@
     <div class="xs-1 left-lg">
       <div class="page-header">
         <h2>İşler</h2>
+        <% if flash[:notice] %>
+          <div class="notice"><%= flash[:notice] %></div>
+        <% end %>
       </div>
     </div>
     <div class="lg-12-3">
