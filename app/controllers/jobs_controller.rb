@@ -1,7 +1,7 @@
 class JobsController < ApplicationController
 
   def index
-    @jobs = Job.all
+    @jobs = Job.where(published: true)
   end
 
   def new
@@ -14,7 +14,12 @@ class JobsController < ApplicationController
 
   def create
     @job = Job.new(job_params)
-    @job.save ? redirect_to(jobs_path) : render(:new)
+    if @job.save
+      flash[:notice] = "İlanınız site admini onayladıktan sonra gözükecektir."
+      redirect_to(jobs_path)
+    else
+      render(:new)
+    end
   end
 
   def job_params
