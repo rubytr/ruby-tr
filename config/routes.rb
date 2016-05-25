@@ -11,7 +11,7 @@ RubyTr::Application.routes.draw do
 
   resources :people, only: [:index, :new, :create]
 
-  resources :jobs, only: [:index, :new, :create, :show]
+  # resources :jobs, only: [:index, :new, :create, :show]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
