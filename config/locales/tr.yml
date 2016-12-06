@@ -191,8 +191,10 @@ tr:
       short: ! '%e %B, %H:%M'
     pm: öğleden sonra
   activerecord:
+    models:
+      user: Kullanıcı
     attributes:
-      person:
+      user:
         name: Ad soyad
         email: E-posta
         web: Blog
@@ -204,4 +206,3 @@ tr:
         description: Açıklama
         link: Başvuru Bağlantısı
         location: Konum
-

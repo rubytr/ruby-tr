@@ -1,0 +1,17 @@
+<div class="xl-4-1 lg-3-1 md-2-1">
+  <div class="thumbnail">
+    <div class="image-circle">
+      <%= gravatar_picture user %>
+    </div>
+    <h3><%= user.name %></h3>
+    <%= link_to twitter_url(user), class: "link", target: "blank", title: "Twitter" do %>
+      <i class="fa fa-twitter fa-2x"></i>
+    <% end %>
+    <%= link_to github_url(user), class: "link", target: "blank", title: "Github" do %>
+      <i class="fa fa-github  fa-2x"></i>
+    <% end %>
+    <%= link_to url_with_protocol(user.web), class: "link", target: "blank", title: "Blog" do %>
+      <i class="fa fa-bookmark fa-2x"></i>
+    <% end %>
+  </div>
+</div>

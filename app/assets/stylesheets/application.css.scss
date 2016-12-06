@@ -86,25 +86,51 @@
     color: #fff;
     background: #CA3633;
   }
-  a.btn, input.btn {
-    display: block;
-    text-align: center;
-    border: 1px solid #39CA74;
-    font-size: 14px;
-    margin: 10px 0;
-    font-size: 14px;
-    -webkit-font-smoothing: antialiased;
-    font-weight: normal;
-    border-radius: 3px;
-    line-height: 44px;
-    color: #fff;
-    background: #39CA74;
-    width: 100%;
-
+  span.user-name {
+    color: #CA3633;
+    margin-top: 10px;
+    display: inline-block;
+    line-height: 32px;
   }
-  a.btn:hover, input.btn:hover{
-    color: #39CA74;
-    background: #fff;
+
+  a.btn, input.btn {
+    &.btn-green {
+      display: block;
+      text-align: center;
+      border: 1px solid #39CA74;
+      font-size: 14px;
+      margin: 10px 0;
+      font-size: 14px;
+      -webkit-font-smoothing: antialiased;
+      font-weight: normal;
+      border-radius: 3px;
+      line-height: 44px;
+      color: #fff;
+      background: #39CA74;
+      width: 100%;
+    }
+
+    &.btn-github {
+      display: inline-block;
+      padding: 0px 10px 0px 8px;
+      color: #333;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #ddd;
+      border: 1px solid #d5d5d5;
+      background-image: linear-gradient(to bottom,#eee 0,#ddd 100%);
+      font-size: 16px;
+      line-height: 40px;
+      vertical-align: center;
+      border-radius: 4px;
+      margin-bottom: 20px;
+
+      > i {
+        line-height: 40px;
+        float: left;
+        margin-right: 5px;
+      }
+    }
   }
 
   input[type=text]{
