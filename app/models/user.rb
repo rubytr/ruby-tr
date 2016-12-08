@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
     where('email=? OR uid=?', auth.info.email, auth.uid).first_or_create do |user|
       user.email = auth.info.email
       user.uid = auth.uid
+      user.gravatar_url = auth.info.image if auth.info.image
       user.provider = auth.provider
       user.password = Devise.friendly_token[0,20]
       user.name = auth.info.name   # assuming the user model has a name
