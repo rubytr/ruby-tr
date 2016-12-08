@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160402211614) do
+ActiveRecord::Schema.define(version: 20161202180219) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 20160402211614) do
     t.boolean  "published",   default: false
   end
 
-  create_table "people", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
     t.string   "github"
@@ -66,6 +66,17 @@ ActiveRecord::Schema.define(version: 20160402211614) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "gravatar_url"
+    t.string   "uid"
+    t.string   "provider"
+    t.string   "encrypted_password"
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
   end
 
 end

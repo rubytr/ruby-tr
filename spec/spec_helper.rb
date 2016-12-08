@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'spork'
+require 'devise'
 
 ENV["RAILS_ENV"] = 'test'
 
@@ -23,6 +24,7 @@ Spork.prefork do
 
     config.filter_run :focus => true
     config.run_all_when_everything_filtered = true
+    config.include Devise::TestHelpers, type: :controller
 
     config.before(:suite) do
       DatabaseCleaner.strategy = :transaction
@@ -42,3 +44,8 @@ Spork.each_run do
   RubyTr::Application.reload_routes!
   FactoryGirl.definition_file_paths = [File.join(Rails.root, 'spec', 'factories')]
 end
+
+def setup_devise
+  @request.env["devise.mapping"] = Devise.mappings[:user]
+end
+

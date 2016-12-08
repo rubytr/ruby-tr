@@ -2,12 +2,14 @@
   <div class="row gutter-20-xs gutter-out-xs center-lg">
     <div class="xs-1 left-lg">
       <div class="page-header">
-        <h2>Topluluk (<%= @people.length %>)</h2>
+        <h2>Topluluk (<%= @users.length %>)</h2>
       </div>
     </div>
     <div class="lg-12-3">
-      <%= link_to new_person_path, class: "btn" do %>
-        <i class="fa fa-plus-square"></i> Yeni Kişi Ekle
+      <% unless current_user %>
+        <%= link_to user_omniauth_authorize_path(:github), class: "btn btn-github" do %>
+          <i class="fa fa-github"></i> Github ile Kayıt Ol
+        <% end %>
       <% end %>
       <br/>
     </div>
@@ -15,7 +17,7 @@
   <div class="row gutter-20-xs gutter-out-xs center-lg">
     <div class="xs-1">
       <div class="row gutter-10-xs center-lg">
-        <%= render @people %>
+        <%= render @users %>
       </div>
     </div>
   </div>

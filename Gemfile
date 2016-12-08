@@ -20,6 +20,8 @@ gem 'high_voltage'
 gem 'puma'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-github'
 
 group :production do
   gem 'pg', '~> 0.17.1'

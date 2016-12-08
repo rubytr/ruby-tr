@@ -56,6 +56,9 @@ tr:
       expired: "zaman aşımında uğramış, yeni bir tane isteyin"
       not_found: "bulunamadı"
       not_locked: "kilitli değil"
+      not_updated:
+        one: "1 hata %{resource} güncellenmesini engelliyor:"
+        other: "%{count} hata %{resource} güncellenmesini engelliyor:"
       not_saved:
-        one: "1 hata %{resource} yaratılmasını engelliyor:"
-        other: "%{count} hata %{resource} yaratılmasını engelliyor:"
+        one: "1 hata %{resource} bilgilerinizin kaydedilmesini engelliyor:"
+        other: "%{count} hata %{resource} bilgilerinizin kaydedilmesini engelliyor:"
