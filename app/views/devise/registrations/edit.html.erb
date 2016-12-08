@@ -26,6 +26,22 @@
           </div>
         </div>
         <div class="row gutter-20-xs left-lg">
+          <div class="lg-12-3 form-title">
+            <%= f.label :twitter %>
+          </div>
+          <div class="lg-12-5">
+            <%= f.text_field :twitter, class: "form-control" %>
+          </div>
+        </div>
+        <div class="row gutter-20-xs left-lg">
+          <div class="lg-12-3 form-title">
+            <%= f.label :web %>
+          </div>
+          <div class="lg-12-5">
+            <%= f.text_field :web, class: "form-control" %>
+          </div>
+        </div>
+        <div class="row gutter-20-xs left-lg">
           <div class="lg-12-8"><%= f.submit 'Kaydet', class: "btn btn-green" %></div>
         </div>
       <% end %>

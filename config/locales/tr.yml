@@ -195,11 +195,11 @@ tr:
       user: Kullanıcı
     attributes:
       user:
-        name: Ad soyad
+        name: Ad Soyad
         email: E-posta
         web: Blog
-        github: GitHub kullanıcı adı
-        twitter: Twitter kullanıcı adı
+        github: GitHub
+        twitter: Twitter
       job:
         title: Başlık
         company: Şirket
