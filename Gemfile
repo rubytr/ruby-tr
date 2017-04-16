@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
-ruby '2.2.2'
+# Farklı Ruby sürümleri kullanan arkadaşlar CUSTOM_RUBY_VERSION verisini bash/zsh ayar dosyasına ekleyerek
+# ya da dotenv gem'i ya da rbenv-vars gibi çözümleri kullanarak kendi kullandıkları sürümle devam edebilir.
+# Detay için => https://devcenter.heroku.com/articles/ruby-versions#specifying-a-ruby-version-via-the-environment
+ruby ENV['CUSTOM_RUBY_VERSION'] || '2.2.2'
 
 gem 'rails', ' ~> 4.2.1'
 gem 'sass-rails', '~> 4.0.0'
