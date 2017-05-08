@@ -7,7 +7,7 @@
     </div>
     <div class="lg-12-3">
       <% unless current_user %>
-        <%= link_to user_omniauth_authorize_path(:github), class: "btn btn-github" do %>
+        <%= link_to user_github_omniauth_authorize_path, class: "btn btn-github" do %>
           <i class="fa fa-github"></i> Github ile Giriş Yap
         <% end %>
       <% end %>
