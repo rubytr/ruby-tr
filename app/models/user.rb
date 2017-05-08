@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   attr_accessor :bypass_humanizer
   require_human_on :create, unless: :bypass_humanizer
   devise :database_authenticatable, :registerable, :rememberable, :trackable, :validatable,
-         :omniauthable, omniauth_providers: :github
+         :omniauthable, :omniauth_providers => [:github]
   default_scope { order(created_at: :asc) }
 
   def self.from_omniauth(auth)

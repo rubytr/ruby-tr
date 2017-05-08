@@ -1,4 +1,4 @@
-class Users
+module Users
   class RegistrationsController < Devise::RegistrationsController
     def edit
       super # We want to test this behavior coming from devise.
