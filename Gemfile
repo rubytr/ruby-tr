@@ -18,7 +18,7 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
 # rest
-gem 'activeadmin', github: 'activeadmin'
+gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin.git'
 gem 'devise'
 gem 'gravatar-ultimate', '~> 2.0.0'
 gem 'high_voltage'
