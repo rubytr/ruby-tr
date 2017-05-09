@@ -8,19 +8,40 @@
         <% end %>
       </div>
     </div>
-
-    <div class="lg-12-3">
-      <%= link_to new_company_path, class: "btn" do %>
-          <i class="fa fa-plus-square"></i> Firmanızı ekleyin
+  </div>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Şirket</th>
+        <th>Sektör</th>
+        <th>Şehir</th>
+        <th>URLs</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @companies.each do |company| %>
+        <tr>
+          <td><%= company.title %></td>
+          <td><%= company.sector %></td>
+          <td><%= company.city %></td>
+          <td>
+            <%= link_to fa_icon("globe"), "http://#{company.url}", target: "_blank" %>
+            <% if company.github.present? %>
+              <%= link_to fa_icon("github"), "http://#{company.url}", target: "_blank" %>
+            <% end %>
+            <% if company.twitter.present? %>
+              <%= link_to fa_icon("twitter"), "http://#{company.url}", target: "_blank" %>
+            <% end %>
+          </td>
+        </tr>
       <% end %>
-      <br/>
-    </div>
+    </tbody>
+  </table>
 
-    <div class="lg-12-3">
-      <%= link_to new_company_path, class: "btn" do %>
-          <i class="fa fa-plus-square"></i> Firmanızı ekleyin
-      <% end %>
-      <br/>
-    </div>
+  <div class="lg-12-3">
+    <%= link_to new_company_path do %>
+      <%= fa_icon "plus-square", text: "Yeni firma ekle" %>
+    <% end %>
+    <br/>
   </div>
 </div>
