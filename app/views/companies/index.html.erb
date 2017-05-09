@@ -9,6 +9,12 @@
       </div>
     </div>
   </div>
+  <div class="lg-12-3">
+    <%= link_to new_company_path do %>
+      <%= fa_icon "plus-square", text: "Yeni firma ekle" %>
+    <% end %>
+  </div>
+  <hr \>
   <table class="table table-striped table-hover">
     <thead>
       <tr>
@@ -27,21 +33,14 @@
           <td>
             <%= link_to fa_icon("globe"), "http://#{company.url}", target: "_blank" %>
             <% if company.github.present? %>
-              <%= link_to fa_icon("github"), "http://#{company.url}", target: "_blank" %>
+              <%= link_to fa_icon("github"), "http://github.com/#{company.github}", target: "_blank" %>
             <% end %>
             <% if company.twitter.present? %>
-              <%= link_to fa_icon("twitter"), "http://#{company.url}", target: "_blank" %>
+              <%= link_to fa_icon("twitter"), "http://twitter.com/#{company.twitter}", target: "_blank" %>
             <% end %>
           </td>
         </tr>
       <% end %>
     </tbody>
   </table>
-
-  <div class="lg-12-3">
-    <%= link_to new_company_path do %>
-      <%= fa_icon "plus-square", text: "Yeni firma ekle" %>
-    <% end %>
-    <br/>
-  </div>
 </div>
