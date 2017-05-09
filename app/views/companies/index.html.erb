@@ -8,6 +8,14 @@
         <% end %>
       </div>
     </div>
+
+    <div class="lg-12-3">
+      <%= link_to new_company_path, class: "btn" do %>
+          <i class="fa fa-plus-square"></i> Firmanızı ekleyin
+      <% end %>
+      <br/>
+    </div>
+
     <div class="lg-12-3">
       <%= link_to new_company_path, class: "btn" do %>
           <i class="fa fa-plus-square"></i> Firmanızı ekleyin
@@ -15,6 +23,4 @@
       <br/>
     </div>
   </div>
-
-  <%= render @companies if @companies.present? %>
 </div>
