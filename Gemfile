@@ -24,6 +24,7 @@ gem 'high_voltage'
 gem 'humanizer', '~> 2.6.0'
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'simple_form'
 
 group :production do
   gem 'pg', '~> 0.17.1'
@@ -36,7 +37,7 @@ group :development, :test do
   gem 'guard'
   gem 'guard-rspec', require: false
   gem 'guard-spork'
-  gem 'rspec-rails', '~> 2.99.0'
+  gem 'rspec-rails'
   gem 'shoulda'
   gem 'spork', '~> 1.0rc'
   gem 'sqlite3', '~> 1.3.8'

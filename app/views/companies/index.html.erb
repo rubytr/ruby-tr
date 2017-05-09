@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row gutter-20-xs gutter-out-xs center-lg">
+    <div class="xs-1 left-lg">
+      <div class="page-header">
+        <h2>Firmalar</h2>
+        <% if flash[:notice] %>
+          <div class="notice"><%= flash[:notice] %></div>
+        <% end %>
+      </div>
+    </div>
+    <div class="lg-12-3">
+      <%= link_to new_company_path, class: "btn" do %>
+          <i class="fa fa-plus-square"></i> Firmanızı ekleyin
+      <% end %>
+      <br/>
+    </div>
+  </div>
+
+  <%= render @companies if @companies.present? %>
+</div>
