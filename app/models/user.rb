@@ -15,7 +15,8 @@ class User < ActiveRecord::Base
       user.gravatar_url = auth.info.image if auth.info.image
       user.provider = auth.provider
       user.password = Devise.friendly_token[0,20]
-      user.name = auth.info.name   # assuming the user model has a name
+      user.name = auth.info.name
+      user.github = auth.extra.raw_info.login
     end
   end
 
