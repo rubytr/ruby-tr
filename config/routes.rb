@@ -6,4 +6,5 @@ RubyTr::Application.routes.draw do
                                     registrations:      'users/registrations',
                                     sessions:           'users/sessions' }
   resources :users, only: [:index, :new, :create, :edit]
+  resources :companies, only: [:index, :new, :create]
 end
