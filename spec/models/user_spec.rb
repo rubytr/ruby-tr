@@ -12,7 +12,7 @@ describe User do
 
   context 'format of email' do
     it 'should be correct' do
-      @user.email = "xyz"
+      @user.email = 'xyz'
       expect(@user.save).to be_falsey
     end
   end
@@ -28,7 +28,7 @@ describe User do
     it 'should check user is human or not on create' do
       user = FactoryGirl.build(:user, bypass_humanizer: false)
       user.save
-      user.errors.full_messages.should include("Humanizer answer İnsan değilsin ey yaratık :D")
+      user.errors.full_messages.should include('Humanizer answer İnsan değilsin ey yaratık :D')
     end
   end
 end

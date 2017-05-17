@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row gutter-20-xs gutter-out-xs center-lg">
+    <div class="xs-1 left-lg">
+      <div class="page-header">
+        <h2>Firmalar</h2>
+        <% if flash[:notice] %>
+          <div class="notice"><%= flash[:notice] %></div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="lg-12-3">
+    <%= link_to new_company_path do %>
+      <%= fa_icon "plus-square", text: "Yeni firma ekle" %>
+    <% end %>
+  </div>
+  <hr \>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Şirket</th>
+        <th>Sektör</th>
+        <th>Şehir</th>
+        <th>URLs</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @companies.each do |company| %>
+        <tr>
+          <td><%= company.title %></td>
+          <td><%= company.sector %></td>
+          <td><%= company.city %></td>
+          <td>
+            <%= link_to fa_icon("globe"), "http://#{company.url}", target: "_blank" %>
+            <% if company.github.present? %>
+              <%= link_to fa_icon("github"), "http://github.com/#{company.github}", target: "_blank" %>
+            <% end %>
+            <% if company.twitter.present? %>
+              <%= link_to fa_icon("twitter"), "http://twitter.com/#{company.twitter}", target: "_blank" %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

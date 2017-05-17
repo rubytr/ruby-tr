@@ -5,7 +5,8 @@ class User < ActiveRecord::Base
   before_save :get_gravatar_url
   attr_accessor :bypass_humanizer
   require_human_on :create, unless: :bypass_humanizer
-  devise :database_authenticatable, :registerable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:github]
+  devise :database_authenticatable, :registerable, :rememberable, :trackable, :validatable,
+         :omniauthable, :omniauth_providers => [:github]
   default_scope { order(created_at: :asc) }
 
   def self.from_omniauth(auth)
@@ -14,14 +15,14 @@ class User < ActiveRecord::Base
       user.uid = auth.uid
       user.gravatar_url = auth.info.image if auth.info.image
       user.provider = auth.provider
-      user.password = Devise.friendly_token[0,20]
-      user.name = auth.info.name   # assuming the user model has a name
+      user.password = Devise.friendly_token[0, 20]
+      user.name = auth.info.name # assuming the user model has a name
     end
   end
 
   private
 
   def get_gravatar_url
-    self.gravatar_url = Gravatar.new(self.email).image_url
+    self.gravatar_url = Gravatar.new(email).image_url
   end
 end

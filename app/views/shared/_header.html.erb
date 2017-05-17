@@ -6,22 +6,35 @@
       </div>
       <div class="lg-12-8">
         <div class="row gutter-10-xs nav">
-          <div class="lg-4-1">
-            <a href="/users">Topluluk</a>
+          <div class="lg-6-1">
+            <%= link_to users_path do %>
+              <%= fa_icon "users", text: "Topluluk" %>
+            <% end %>
           </div>
-<!--           <div class="lg-4-1">
-            <a href="/jobs">İşler</a>
-          </div> -->
-          <div class="lg-4-1">
-            <%= link_to "Mail Grubu", page_path("group") %>
+          <div class="lg-6-1">
+            <%= link_to page_path("group") do %>
+              <%= fa_icon "envelope", text: "Mail Grubu" %>
+            <% end %>
           </div>
-          <div class="lg-4-1">
-            <%= link_to "#ruby-tr IRC", page_path("irc") %>
+          <div class="lg-6-1">
+            <%= link_to page_path("irc") do %>
+              <%= fa_icon "hashtag", text: "IRC" %>
+            <% end %>
+          </div>
+          <div class="lg-6-1">
+            <%= link_to "https://rubytr.herokuapp.com/", target: "_blank" do %>
+              <%= fa_icon "slack", text: "Slack" %>
+            <% end %>
+          </div>
+          <div class="lg-6-1">
+            <%= link_to companies_path do %>
+              <%= fa_icon "building", text: "Firmalar" %>
+            <% end %>
           </div>
           <% if current_user %>
-            <div class="lg-4-1">
+            <div class="lg-6-1">
               <%= link_to edit_user_registration_path, class: 'user-name' do %>
-                <i class="fa fa-user"></i> <%= current_user.name %>
+                <%= fa_icon "user", text: current_user.name %>
               <% end %>
             </div>
           <% end %>

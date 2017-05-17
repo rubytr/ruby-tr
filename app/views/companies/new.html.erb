@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row gutter-20-xs gutter-out-xs left-lg">
+    <div class="xs-1">
+      <div class="page-header">
+        <h2>Yeni Firma Ekle</h2>
+      </div>
+
+      <%= simple_form_for @company do |f| %>
+        <div class="row gutter-20-xs left-lg">
+          <div class="lg-12-3 form-title"><%= f.label :title, "Firma adı *" %></div>
+          <div class="lg-12-5"><%= f.input :title, label: false %></div>
+        </div>
+
+        <div class="row gutter-20-xs left-lg">
+          <div class="lg-12-3 form-title"><%= f.label :sector, "Sektörünüz *" %></div>
+          <div class="lg-12-5"><%= f.input :sector, label: false, placeholder: 'Eğitim, Sağlık, E-ticaret vb.' %></div>
+        </div>
+
+        <div class="row gutter-20-xs left-lg">
+          <div class="lg-12-3 form-title"><%= f.label :city, "Şehir *" %></div>
+          <div class="lg-12-5"><%= f.input :city, label: false %></div>
+        </div>
+
+        <div class="row gutter-20-xs left-lg">
+          <div class="lg-12-3 form-title"><%= f.label :url, "Web sayfanız *" %></div>
+          <div class="lg-12-5"><%= f.input :url, label: false, as: :string, placeholder: 'firmaniz.com' %></div>
+        </div>
+
+        <div class="row gutter-20-xs left-lg">
+          <div class="lg-12-3 form-title"><%= f.label :github, "Github kullanıcı adı" %></div>
+          <div class="lg-12-5"><%= f.input :github, label: false %></div>
+        </div>
+
+        <div class="row gutter-20-xs left-lg">
+          <div class="lg-12-3 form-title"><%= f.label :twitter, "Twitter kullanıcı adı" %></div>
+          <div class="lg-12-5"><%= f.input :twitter, label: false %></div>
+        </div>
+
+        <div class="row gutter-20-xs left-lg">
+          <div class="lg-12-3 form-title"><%= f.label :humanizer_answer, "#{@company.humanizer_question} *" %></div>
+          <div class="lg-12-5"><%= f.input :humanizer_answer, label: false %></div>
+        </div>
+
+        <%= f.hidden_field :humanizer_question_id %>
+
+        <hr \>
+
+        <div class="row gutter-20-xs left-lg">
+          <div class="lg-12-5"><%= f.button :submit, "Firma Ekle" %></div>
+        </div>
+
+        <hr \>
+
+        <div class="row gutter-20-xs left-lg">
+          <div class="alert alert-warning" role="alert">Firmanız yönetici onayından sonra görünür olacaktır.</div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
