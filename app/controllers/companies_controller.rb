@@ -1,6 +1,6 @@
 class CompaniesController < ApplicationController
   def index
-    @companies = Company.published
+    @companies = Company.published.order(:title)
   end
 
   def new
