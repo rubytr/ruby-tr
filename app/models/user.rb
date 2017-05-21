@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
          :omniauthable, :omniauth_providers => [:github]
   default_scope { order(created_at: :asc) }
 
-  def self.from_omniauth(auth)
+ def self.from_omniauth(auth)
     where('email=? OR uid=?', auth.info.email, auth.uid).first_or_create do |user|
       user.email = auth.info.email
       user.uid = auth.uid

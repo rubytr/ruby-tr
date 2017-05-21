@@ -11,7 +11,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'font-awesome-rails', '~> 4.7'
 gem 'jbuilder', '~> 1.5.3'
 gem 'jquery-datatables-rails', '~> 3.4.0'
-gem 'jquery-rails', '~> 3.0.4'
+gem 'jquery-rails', '~> 3.1.4'
 gem 'jquery-rails-cdn'
 gem 'sass-rails', '~> 5.0.0'
 gem 'turbolinks'
@@ -26,6 +26,8 @@ gem 'humanizer', '~> 2.6.0'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'simple_form'
+gem 'activity_notification', git: 'https://github.com/simukappu/activity_notification'
+gem 'slack-notifier'
 
 group :production do
   gem 'pg', '~> 0.17.1'
@@ -36,9 +38,9 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'guard'
-  gem 'guard-rspec', require: false
+  gem 'guard-rspec', '~> 4.7', require: false
   gem 'guard-spork'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.6'
   gem 'shoulda'
   gem 'spork', '~> 1.0rc'
   gem 'sqlite3', '~> 1.3.8'
@@ -51,4 +53,5 @@ group :development do
   gem 'quiet_assets', '~> 1.0.2'
   gem 'rubocop'
   gem 'spring'
+  gem 'letter_opener'
 end
