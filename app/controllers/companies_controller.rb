@@ -10,6 +10,7 @@ class CompaniesController < ApplicationController
   def create
     @company = Company.new(company_params)
     if @company.save
+      @company.notify :admin_users
       flash[:notice] = 'Firmanız site yöneticisi tarafından onaylandıktan sonra gözükecektir.'
       redirect_to(companies_path)
     else

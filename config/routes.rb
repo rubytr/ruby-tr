@@ -7,4 +7,7 @@ RubyTr::Application.routes.draw do
                                     sessions:           'users/sessions' }
   resources :users, only: [:index, :new, :create, :edit]
   resources :companies, only: [:index, :new, :create]
+
+  notify_to :admin_users, with_devise: :admin_users
+
 end

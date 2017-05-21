@@ -18,3 +18,4 @@
 .idea/
 .rspec
 vendor/bundle
+.rbenv-vars
