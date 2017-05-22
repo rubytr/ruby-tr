@@ -10,7 +10,7 @@ class Company < ActiveRecord::Base
   scope :published, -> { where(published: true) }
 
   def send_notification
-    Slack::Notifier.new(ENV['WEBHOOK_URL']).ping('Yeni şirket eklendi.')
+    Slack::Notifier.new(ENV['WEBHOOK_URL']).ping("Yeni şirket eklendi: #{Company.last.title}")
   end
 
 end
