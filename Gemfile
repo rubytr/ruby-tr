@@ -26,6 +26,7 @@ gem 'humanizer', '~> 2.6.0'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'simple_form'
+gem 'slack-notifier'
 
 group :production do
   gem 'pg', '~> 0.17.1'
