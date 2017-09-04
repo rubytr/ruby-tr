@@ -48,4 +48,3 @@ end
 def setup_devise
   @request.env["devise.mapping"] = Devise.mappings[:user]
 end
-
