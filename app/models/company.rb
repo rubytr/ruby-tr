@@ -1,4 +1,4 @@
-class Company < ActiveRecord::Base
+class Company < ApplicationRecord
   after_commit :send_notification, on: :create
 
   validates :title, :sector, :city, :url, presence: true

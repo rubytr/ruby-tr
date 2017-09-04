@@ -1,4 +1,4 @@
-class Job < ActiveRecord::Base
+class Job < ApplicationRecord
   validates :title, :company, :description, :link, :location, presence: true
 
   include Humanizer
