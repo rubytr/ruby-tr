@@ -18,7 +18,7 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
 # rest
-gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin.git'
+gem 'activeadmin', '~> 1.1'
 gem 'devise'
 gem 'gravatar-ultimate', '~> 2.0.0'
 gem 'high_voltage'
@@ -47,7 +47,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'better_errors', '~> 1.0.1'
+  gem 'better_errors', '~> 2.3'
   gem 'binding_of_caller', '~> 0.7.2'
   gem 'meta_request', '~> 0.4'
   # quiet_assets requires railties < 5.0, >= 3.1
