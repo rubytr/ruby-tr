@@ -24,7 +24,7 @@ Spork.prefork do
 
     config.filter_run :focus => true
     config.run_all_when_everything_filtered = true
-    config.include Devise::TestHelpers, type: :controller
+    config.include Devise::Test::ControllerHelpers, type: :controller
 
     config.before(:suite) do
       DatabaseCleaner.strategy = :transaction

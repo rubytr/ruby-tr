@@ -21,7 +21,7 @@ describe Users::RegistrationsController do
         user = FactoryGirl.create(:user)
         sign_in user
         new_info = { email: 'wrong_mail_address', name: 'New name' }
-        put :update, user: new_info
+        put :update, params: { user: new_info }
         expect(response).to be_success
       end
     end
