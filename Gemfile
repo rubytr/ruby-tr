@@ -2,14 +2,14 @@ source 'https://rubygems.org'
 
 # core
 gem 'puma'
-gem 'rails', ' ~> 5.0', '< 5.1'
+gem 'rails', '5.1.4'
 
 # assets
 gem 'bootstrap-sass', '~> 3.2'
 gem 'bootswatch-rails'
 gem 'coffee-rails', '~> 4.2'
 gem 'font-awesome-rails', '~> 4.7'
-gem 'jbuilder', '~> 1.5.3'
+gem 'jbuilder', '~> 2.6.4'
 gem 'jquery-datatables-rails', '~> 3.4.0'
 gem 'jquery-rails', '~> 4.3'
 gem 'jquery-rails-cdn'
