@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.4.1'
+
 # core
 gem 'puma'
 gem 'rails', '5.1.4'
