@@ -11,8 +11,8 @@ describe Users::RegistrationsController do
         user = FactoryGirl.create(:user)
         sign_in user
         new_info = { email: 'new_mail@gmail.com', name: 'New name' }
-        put :update, user: new_info
-        response.should redirect_to edit_user_registration_path
+        put :update, params: { user: new_info }
+        expect(response).to redirect_to edit_user_registration_path
       end
     end
 
@@ -21,8 +21,8 @@ describe Users::RegistrationsController do
         user = FactoryGirl.create(:user)
         sign_in user
         new_info = { email: 'wrong_mail_address', name: 'New name' }
-        put :update, user: new_info
-        response.should be_success
+        put :update, params: { user: new_info }
+        expect(response).to be_success
       end
     end
   end
@@ -35,7 +35,7 @@ describe Users::RegistrationsController do
     context 'when not logged in' do
       it 'redirects to users path' do
         get :edit
-        response.should redirect_to new_user_session_path
+        expect(response).to redirect_to new_user_session_path
       end
     end
   end
