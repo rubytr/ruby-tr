@@ -11,7 +11,7 @@ gem 'bootstrap-sass', '~> 3.2'
 gem 'bootswatch-rails'
 gem 'coffee-rails', '~> 4.2'
 gem 'font-awesome-rails', '~> 4.7'
-gem 'jbuilder', '~> 2.6.4'
+gem 'jbuilder', '~> 2.7'
 gem 'jquery-datatables-rails', '~> 3.4.0'
 gem 'jquery-rails', '~> 4.3'
 gem 'jquery-rails-cdn'
@@ -32,7 +32,7 @@ gem 'slack-notifier'
 gem 'xmlrpc'
 
 group :production do
-  gem 'pg', '~> 0.20.0'
+  gem 'pg', '~> 0.21.0'
   gem 'rails_12factor', '~> 0.0.2'
 end
 
