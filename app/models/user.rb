@@ -21,6 +21,8 @@ class User < ApplicationRecord
     end
   end
 
+  has_many :announcements, dependent: :destroy
+
   private
 
   def get_gravatar_url

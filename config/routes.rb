@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  root to: 'high_voltage/pages#show', id: 'main', as: :root
+  root 'pages#main'
+  get '/irc', to: 'pages#irc'
+  get '/group', to: 'pages#group'
   devise_for :users, controllers: { omniauth_callbacks: 'callbacks',
                                     registrations:      'users/registrations',
                                     sessions:           'users/sessions' }
