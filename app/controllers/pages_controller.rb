@@ -1,3 +1,4 @@
+require "kramdown"
 class PagesController < ApplicationController
   def group
   end

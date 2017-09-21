@@ -25,6 +25,7 @@ gem 'devise'
 gem 'gravatar-ultimate', '~> 2.0.0'
 # gem 'high_voltage'
 gem 'humanizer', '~> 2.6.0'
+gem 'kramdown', require: false
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'simple_form'
