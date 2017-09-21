@@ -1,9 +1,9 @@
 module UsersHelper
   def url_with_protocol(url)
-    unless url.try(:empty?)
-      /^http/.match(url) ? url : "http://#{url}"
-    else
+    if url.try(:empty?)
       '#'
+    else
+      /^http/.match?(url) ? url : "http://#{url}"
     end
   end
 

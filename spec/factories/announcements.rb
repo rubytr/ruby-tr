@@ -1,7 +1,9 @@
+require 'faker'
+
 FactoryGirl.define do
   factory :announcement do
-    title "MyString"
-    content "MyText"
-    user nil
+    title Faker::Hipster.sentence
+    content Faker::Hipster.paragraph(20)
+    user
   end
 end

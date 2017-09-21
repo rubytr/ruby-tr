@@ -12,5 +12,4 @@ class Company < ApplicationRecord
   def send_notification
     Slack::Notifier.new(ENV['WEBHOOK_URL']).ping("Yeni şirket eklendi: #{Company.last.title}")
   end
-
 end

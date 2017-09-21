@@ -40,8 +40,10 @@ end
 group :development, :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails'
+  gem 'faker', require: false
   gem 'guard'
   gem 'guard-rspec', require: false
+  gem 'guard-rubocop', require: false
   gem 'guard-spork'
   gem 'rspec-rails'
   gem 'shoulda'

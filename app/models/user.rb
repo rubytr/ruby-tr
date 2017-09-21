@@ -6,8 +6,9 @@ class User < ApplicationRecord
   attr_accessor :bypass_humanizer
   require_human_on :create, unless: :bypass_humanizer
   devise :database_authenticatable, :registerable, :rememberable, :trackable, :validatable,
-         :omniauthable, :omniauth_providers => [:github]
+         :omniauthable, omniauth_providers: [:github]
   default_scope { order(created_at: :asc) }
+  has_many :announcements, dependent: :destroy
 
   def self.from_omniauth(auth)
     where('email=? OR uid=?', auth.info.email, auth.uid).first_or_create do |user|
@@ -15,13 +16,11 @@ class User < ApplicationRecord
       user.uid = auth.uid
       user.gravatar_url = auth.info.image if auth.info.image
       user.provider = auth.provider
-      user.password = Devise.friendly_token[0,20]
+      user.password = Devise.friendly_token[0, 20]
       user.name = auth.info.name
       user.github = auth.extra.raw_info.login
     end
   end
-
-  has_many :announcements, dependent: :destroy
 
   private
 
