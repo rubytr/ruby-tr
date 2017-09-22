@@ -8,7 +8,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:github]
   default_scope { order(created_at: :asc) }
-  has_many :announcements, dependent: :destroy
 
   def self.from_omniauth(auth)
     where('email=? OR uid=?', auth.info.email, auth.uid).first_or_create do |user|
