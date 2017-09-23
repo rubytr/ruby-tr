@@ -1,10 +1,11 @@
 module UsersHelper
   def url_with_protocol(url)
-    if url.try(:empty?)
-      '#'
-    else
-      /^http/.match?(url) ? url : "http://#{url}"
-    end
+    # if url.try(:empty?)
+    #   '#'
+    # else
+    #   /^http/.match?(url) ? url : "http://#{url}"
+    # end
+    url.blank? ? '#' : (/^http/.match?(url) ? url : "http://#{url}")
   end
 
   def gravatar_picture(user)
