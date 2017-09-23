@@ -15,5 +15,4 @@ ActiveAdmin.register Announcement do
   end
 
   filter :admin_user, as: :select, collection: admin_collection
-
 end
