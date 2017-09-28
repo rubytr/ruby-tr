@@ -9,9 +9,15 @@
       </div>
     </div>
   </div>
-  <div class="lg-12-3">
-    <%= link_to new_company_path do %>
-      <%= fa_icon "plus-square", text: "Yeni firma ekle" %>
+  <div class="xs-1">
+    <% if user_signed_in? %>
+      <%= link_to new_company_path do %>
+        <%= fa_icon "plus-square", text: "Yeni firma ekle" %>
+      <% end %>
+    <% else %>
+      <%= link_to user_github_omniauth_authorize_path, class: 'btn btn-github' do %>
+        <%= fa_icon "github", text: "Yeni firma eklemek için GitHub ile giriş yapın" %>
+      <% end %>
     <% end %>
   </div>
   <hr \>

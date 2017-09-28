@@ -1,7 +1,7 @@
 module Users
   class SessionsController < Devise::SessionsController
     def new
-      redirect_to users_path
+      redirect_to :back
     end
   end
 end
