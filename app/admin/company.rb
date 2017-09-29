@@ -1,3 +1,3 @@
 ActiveAdmin.register Company do
-  permit_params :user_id, :title, :sector, :url, :github, :twitter, :city, :published
+  permit_params :title, :sector, :url, :github, :twitter, :city, :published
 end

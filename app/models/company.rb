@@ -1,5 +1,5 @@
 class Company < ApplicationRecord
-  belongs_to :user, optional: true
+  belongs_to :user
 
   after_commit :send_notification, on: :create if Rails.env.production?
 

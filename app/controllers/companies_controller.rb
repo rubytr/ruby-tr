@@ -10,9 +10,7 @@ class CompaniesController < ApplicationController
   end
 
   def create
-    params[:company][:user_id] = current_user.id
-    @company = Company.new(company_params)
-    if @company.save
+    if current_user.companies.create(company_params)
       flash[:notice] = 'Firmanız site yöneticisi tarafından onaylandıktan sonra gözükecektir.'
       redirect_to(companies_path)
     else
@@ -23,7 +21,7 @@ class CompaniesController < ApplicationController
   private
 
   def company_params
-    params.require(:company).permit(:user_id, :title, :sector, :url, :github, :twitter, :city,
+    params.require(:company).permit(:title, :sector, :url, :github, :twitter, :city,
                                     :humanizer_answer, :humanizer_question_id)
   end
 
