@@ -43,6 +43,7 @@ group :development, :test do
   gem 'guard-rspec', require: false
   gem 'guard-spork'
   gem 'rspec-rails'
+  gem 'rails-controller-testing'
   gem 'shoulda'
   gem 'spork', '~> 1.0rc'
   gem 'sqlite3', '~> 1.3.8'
