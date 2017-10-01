@@ -1,42 +1,12 @@
 <div class="container">
   <div class="row gutter-20-xs gutter-out-xs left-xs">
     <div class="xl-12-8 lg-12-7">
-      <div class="news">
-        <h2>Twitter hesabı hakkında</h2>
-        <p>
-          Topluluğumuzun Twitter hesabına üstteki linklerden ulaşabilirsiniz. Ruby ve topluluk hakkındaki en son gelişmeleri oradan takip edebilir, sorularınızı sorabilirsiniz.
-        </p>
-      </div>
-      <div class="news">
-        <h2>Firmalar dizini açılmıştır</h2>
-        <p>
-          Ruby, Ruby on Rails gibi teknolojileri kullanan firmaları derlediğimiz bir dizin oluşturduk. Sizde dizine girerek firmanızı <%= link_to "ekleyebilir", new_company_path %> veya diğer <%= link_to "firmalara", companies_path %> göz atabilirsiniz.
-        </p>
-      </div>
-      <div class="news">
-        <h2>Slack kanalımız hakkında</h2>
-        <p>
-          Topluluğumuz Slack kanalına artık sitemiz üzerinden ulaşabilirsiniz. Üstteki linklerden Slack kanalımıza kolayca erişebilirsiniz.
-        </p>
-      </div>
-      <div class="news">
-        <h2>Mail grubumuz ve IRC kanalımız hakkında</h2>
-        <p>
-          Topluluğumuz Google mail grubuna ve IRC kanalına (#ruby-tr) artık sitemiz üzerinden ulaşabilirsiniz. Üstteki linklerden mail grubumuza ya da IRC kanalımıza kolayca erişebilirsiniz.
-        </p>
-      </div>
-      <div class="news">
-        <h2>Hakkımızda sayfası güncellenmiştir</h2>
-        <p>
-          Topluluğumuz üyelerini bulabileceğiniz sayfamız güncellenmiş olup, <%= link_to 'buradan', users_path %> erişebilirsiniz.
-        </p>
-      </div>
-      <div class="news">
-        <h2>Ruby Türkiye sitesi yayında</h2>
-        <p>
-          Ruby Türkiye topluluğu olarak sitemiz yayına girmiş bulunmaktadır. Uzun süredir yayına almak istediğimiz bu site, soğuk bir kış akşamı sıcak bir muhabbet ortamı yakaladığımız IRC kanalında bir anda hayata geçmeye başlamış ve çok kısa bir süre içinde tamamlanmıştır :)
-        </p>
-      </div>
+      <% @announcements.each do |announcement| %>
+      <article class="news">
+        <h2><%= announcement.title %></h2>
+        <p><%= Kramdown::Document.new(announcement.content).to_html.html_safe %></p>
+      </article>
+      <% end %>
     </div>
     <div class="xl-12-4 lg-12-5">
       <aside>
@@ -48,7 +18,7 @@
         <h3>Nasıl iletişim kurabilirim ?</h3>
         <ul class="connect-links">
           <li><%= link_to "Twitter", "https://twitter.com/ruby_turkiye" %></li>
-          <li><%= link_to "Mail Grubu", page_path("group") %></li>
+          <li><%= link_to "Mail Grubu", "/group" %></li>
           <li><%= link_to "Slack Kanalı", "https://rubytr.slack.com" %></li>
         </ul>
 
