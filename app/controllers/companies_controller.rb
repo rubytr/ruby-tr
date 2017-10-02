@@ -24,5 +24,4 @@ class CompaniesController < ApplicationController
     params.require(:company).permit(:title, :sector, :url, :github, :twitter, :city,
                                     :humanizer_answer, :humanizer_question_id)
   end
-
 end

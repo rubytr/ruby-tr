@@ -12,7 +12,7 @@
             <% end %>
           </div>
           <div class="lg-6-1">
-            <%= link_to page_path("group") do %>
+            <%= link_to "/group" do %>
               <%= fa_icon "envelope", text: "Mail Grubu" %>
             <% end %>
           </div>
@@ -33,7 +33,7 @@
           </div>
           <% if current_user %>
             <div class="lg-6-1">
-              <%= link_to edit_user_registration_path, class: 'user-name' do %>
+              <%= link_to edit_user_registration_path, class: 'user-name truncate' do %>
                 <%= fa_icon "user", text: current_user.name %>
               <% end %>
             </div>

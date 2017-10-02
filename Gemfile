@@ -11,7 +11,7 @@ gem 'bootstrap-sass', '~> 3.2'
 gem 'bootswatch-rails'
 gem 'coffee-rails', '~> 4.2'
 gem 'font-awesome-rails', '~> 4.7'
-gem 'jbuilder', '~> 2.6.4'
+gem 'jbuilder', '~> 2.7'
 gem 'jquery-datatables-rails', '~> 3.4.0'
 gem 'jquery-rails', '~> 4.3'
 gem 'jquery-rails-cdn'
@@ -23,8 +23,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'activeadmin', '~> 1.1'
 gem 'devise'
 gem 'gravatar-ultimate', '~> 2.0.0'
-gem 'high_voltage'
+# gem 'high_voltage'
 gem 'humanizer', '~> 2.6.0'
+gem 'kramdown', require: false
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'simple_form'
@@ -32,15 +33,17 @@ gem 'slack-notifier'
 gem 'xmlrpc'
 
 group :production do
-  gem 'pg', '~> 0.20.0'
+  gem 'pg', '~> 0.21.0'
   gem 'rails_12factor', '~> 0.0.2'
 end
 
 group :development, :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails'
+  gem 'faker', require: false
   gem 'guard'
   gem 'guard-rspec', require: false
+  gem 'guard-rubocop', require: false
   gem 'guard-spork'
   gem 'rspec-rails'
   gem 'rails-controller-testing'
