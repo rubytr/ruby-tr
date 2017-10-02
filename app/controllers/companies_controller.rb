@@ -1,4 +1,6 @@
 class CompaniesController < ApplicationController
+  before_action :authenticate_user!, only: %i[new create]
+
   def index
     @companies = Company.published.order(:title)
   end
@@ -8,8 +10,7 @@ class CompaniesController < ApplicationController
   end
 
   def create
-    @company = Company.new(company_params)
-    if @company.save
+    if current_user.companies.create(company_params)
       flash[:notice] = 'Firmanız site yöneticisi tarafından onaylandıktan sonra gözükecektir.'
       redirect_to(companies_path)
     else

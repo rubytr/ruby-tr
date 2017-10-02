@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :companies
+
   validates :name, presence: true
 
   include Humanizer

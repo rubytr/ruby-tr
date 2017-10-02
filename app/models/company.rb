@@ -1,7 +1,10 @@
 class Company < ApplicationRecord
-  after_commit :send_notification, on: :create
+  belongs_to :user
+
+  after_commit :send_notification, on: :create if Rails.env.production?
 
   validates :title, :sector, :city, :url, presence: true
+  validates :title, uniqueness: { case_sensitive: false }
 
   include Humanizer
   attr_accessor :bypass_humanizer
