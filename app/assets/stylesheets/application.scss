@@ -223,6 +223,10 @@ textarea {
     font-weight: normal;
   }
 
+  footer .text-right a:last-child {
+    padding-right: 0;
+  }
+
   footer .text-right a:focus {
     text-decoration: none;
   }
