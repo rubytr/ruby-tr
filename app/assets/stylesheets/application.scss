@@ -216,6 +216,17 @@ textarea {
     margin-top: 20px;
   }
 
+  footer .text-right a {
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  footer .text-right a:focus {
+    text-decoration: none;
+  }
+
 /* Typography */
 
   h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
