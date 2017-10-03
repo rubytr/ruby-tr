@@ -1,5 +1,7 @@
 def admin_collection
-  AdminUser.all.map { |a| [a.email, a.id] }
+  proc {
+    AdminUser.all.map { |a| [a.email, a.id] }
+  }
 end
 
 ActiveAdmin.register Announcement do
