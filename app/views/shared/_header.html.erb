@@ -7,23 +7,28 @@
       <div class="lg-12-2"></div>
       <div class="lg-12-6">
         <div id="top-navbar-right" class="row gutter-10-xs nav">
-          <div class="lg-3-1">
+          <div class="lg-4-1">
             <%= link_to users_path do %>
               <%= fa_icon "users", text: "Topluluk" %>
             <% end %>
           </div>
-          <div class="lg-3-1">
+          <div class="lg-4-1">
             <%= link_to "/group" do %>
               <%= fa_icon "envelope", text: "Mail Grubu" %>
             <% end %>
           </div>
-          <div class="lg-3-1">
+          <div class="lg-4-1">
             <%= link_to companies_path do %>
               <%= fa_icon "building", text: "Firmalar" %>
             <% end %>
           </div>
+          <div class="lg-4-1">
+          <%= link_to "https://rubytr.herokuapp.com/", target: "_blank" do %>
+            <%= fa_icon "slack", text: "Slack" %>
+          <% end %>
+          </div>
           <% if current_user %>
-            <div class="lg-4-1">
+            <div class="lg-5-1">
               <%= link_to edit_user_registration_path, class: 'user-name truncate' do %>
                 <%= fa_icon "user", text: current_user.name %>
               <% end %>
