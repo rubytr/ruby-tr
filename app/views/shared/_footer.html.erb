@@ -2,7 +2,20 @@
   <div class="container">
     <div class="row gutter-20-xs gutter-out-xs left-lg">
       <div class="lg-2-1">&copy; <%= Time.now.year %> - Ruby Türkiye</div>
-      <div class="lg-2-1"></div>
+      <div class="lg-2-1 text-right">
+        <%= link_to "https://twitter.com/ruby_turkiye", target: "_blank" do %>
+          <%= fa_icon "twitter", text: "Twitter" %>
+        <% end %>
+        <%= link_to 'https://www.meetup.com/preview/Ruby-Turkiye', target: '_blank' do %>
+          <%= fa_icon 'meetup', text: 'Meetup' %>
+        <% end %>
+        <%= link_to 'https://www.facebook.com/rubyturkiye', target: '_blank' do %>
+          <%= fa_icon 'facebook', text: 'Facebook' %>
+        <% end %>
+        <%= link_to "https://rubytr.herokuapp.com/", target: "_blank" do %>
+          <%= fa_icon "slack", text: "Slack" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </footer>
