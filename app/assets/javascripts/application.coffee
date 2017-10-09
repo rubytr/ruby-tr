@@ -10,5 +10,5 @@ jQuery ->
   if top_navbar_right.children().length == 5
     top_navbar_right.children().each (index, element) =>
       if $(element).hasClass('lg-4-1')
-        $(element).removeClass('lg-5-1')
+        $(element).removeClass('lg-4-1')
         $(element).addClass('lg-5-1')
