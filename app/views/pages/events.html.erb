@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row gutter-20-xs gutter-out-xs left-lg">
+    <div class="xs-1">
+      <div class="page-header">
+        <h2>Yaklaşan Etkinlikler</h2>
+      </div>
+    </div>
+  </div>
+  <div class="row gutter-20-xs gutter-out-xs center-lg">
+    <div class="xl-12-12">
+      <% @events.each do |event| %>
+        <article class="events">
+          <h2><a href="<%= event['link'] %>" target="_blank"><%= event['name'] %></a></h2>
+          <p><%= event['description'].html_safe %></p>
+        </article>
+      <% end %>
+    </div>
+  </div>
+</div>
