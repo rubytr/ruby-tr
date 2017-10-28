@@ -1,5 +1,6 @@
 #= require jquery_ujs
 #= require bootstrap.min
+#= require ./pages
 
 jQuery ->
   forum_embed = $("#forum_embed")
