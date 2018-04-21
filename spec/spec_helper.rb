@@ -42,7 +42,7 @@ end
 
 Spork.each_run do
   RubyTr::Application.reload_routes!
-  FactoryGirl.definition_file_paths = [File.join(Rails.root, 'spec', 'factories')]
+  FactoryBot.definition_file_paths = [File.join(Rails.root, 'spec', 'factories')]
 end
 
 def setup_devise

@@ -39,7 +39,7 @@ end
 
 group :development, :test do
   gem 'database_cleaner'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'faker', require: false
   gem 'guard'
   gem 'guard-rspec', require: false

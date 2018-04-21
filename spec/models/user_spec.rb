@@ -1,7 +1,7 @@
 require 'spec_helper'
 describe User do
   before(:all) do
-    @user = FactoryGirl.create(:user)
+    @user = FactoryBot.create(:user)
   end
 
   context 'non-specific tests' do
@@ -19,14 +19,14 @@ describe User do
 
   context 'gravatar_url field' do
     it 'should be set before save' do
-      user = FactoryGirl.create(:user)
+      user = FactoryBot.create(:user)
       expect(user.gravatar_url).not_to be_empty
     end
   end
 
   context 'humanizer' do
     it 'should check user is human or not on create' do
-      user = FactoryGirl.build(:user, bypass_humanizer: false)
+      user = FactoryBot.build(:user, bypass_humanizer: false)
       user.save
       expect(user.errors.full_messages).to include('Humanizer answer İnsan değilsin ey yaratık :D')
     end

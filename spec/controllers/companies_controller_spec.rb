@@ -3,7 +3,7 @@ require 'spec_helper'
 describe CompaniesController do
   context '#index' do
     before do
-      FactoryGirl.create_list :company, 10, bypass_humanizer: true
+      FactoryBot.create_list :company, 10, bypass_humanizer: true
       get :index
     end
 
@@ -28,7 +28,7 @@ describe CompaniesController do
 
   context '#create with user' do
     before do
-      user = FactoryGirl.create :user
+      user = FactoryBot.create :user
       sign_in user
       post :create, params: { company: { title: 'a company', sector: 'a sector', url: 'http://example.com', city: 'a city' } }
     end

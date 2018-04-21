@@ -8,7 +8,7 @@ describe Users::RegistrationsController do
 
     context 'with correct data' do
       it 'updates user and redirects to edit user path' do
-        user = FactoryGirl.create(:user)
+        user = FactoryBot.create(:user)
         sign_in user
         new_info = { email: 'new_mail@gmail.com', name: 'New name' }
         put :update, params: { user: new_info }
@@ -18,7 +18,7 @@ describe Users::RegistrationsController do
 
     context 'with wrong data' do
       it 'does not update' do
-        user = FactoryGirl.create(:user)
+        user = FactoryBot.create(:user)
         sign_in user
         new_info = { email: 'wrong_mail_address', name: 'New name' }
         put :update, params: { user: new_info }
