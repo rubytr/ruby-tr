@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
-ruby '2.4.1'
+ruby '2.5.1'
 
 # core
 gem 'puma'
-gem 'rails', '5.1.4'
+gem 'rails', '~> 5.1', '< 5.2'
 
 # assets
 gem 'bootstrap-sass', '~> 3.2'
@@ -39,7 +39,7 @@ end
 
 group :development, :test do
   gem 'database_cleaner'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'faker', require: false
   gem 'guard'
   gem 'guard-rspec', require: false

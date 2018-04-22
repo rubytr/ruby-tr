@@ -1,6 +1,6 @@
 require 'faker'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :announcement do
     title Faker::Hipster.sentence
     content Faker::Hipster.paragraph(20)

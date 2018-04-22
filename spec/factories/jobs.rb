@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :job do
     title 'Ruby Developer'
     company '42 Signals'
