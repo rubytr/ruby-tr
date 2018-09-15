@@ -20,6 +20,7 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0, 20]
       user.name = auth.info.name
       user.github = auth.extra.raw_info.login
+      user.bypass_humanizer = true
     end
   end
 
