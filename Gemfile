@@ -5,6 +5,7 @@ ruby '2.5.3'
 # core
 gem 'puma'
 gem 'rails', '5.2.1'
+gem "rack", ">= 2.0.6"
 
 # assets
 gem 'bootstrap-sass', '~> 3.2'
