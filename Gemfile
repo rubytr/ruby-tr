@@ -6,6 +6,7 @@ ruby '2.5.3'
 gem 'puma'
 gem 'rails', '5.2.1'
 gem "rack", ">= 2.0.6"
+gem "nokogiri", ">= 1.8.5"
 
 # assets
 gem 'bootstrap-sass', '~> 3.2'
