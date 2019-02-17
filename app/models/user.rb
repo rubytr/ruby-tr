@@ -5,8 +5,6 @@ class User < ApplicationRecord
 
   include Humanizer
   before_save :the_gravatar_url
-  attr_accessor :bypass_humanizer
-  require_human_on :create, unless: :bypass_humanizer
   devise :database_authenticatable, :registerable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:github]
   default_scope { order(created_at: :asc) }
