@@ -9,7 +9,7 @@ gem "rack", ">= 2.0.6"
 gem "nokogiri", ">= 1.8.5"
 
 # assets
-gem 'bootstrap-sass', '~> 3.2'
+gem "bootstrap-sass", ">= 3.4.1"
 gem 'bootswatch-rails'
 gem 'coffee-rails', '~> 4.2'
 gem 'font-awesome-rails', '~> 4.7'
