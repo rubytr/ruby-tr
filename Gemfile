@@ -4,7 +4,7 @@ ruby '2.6.0'
 
 # core
 gem 'puma'
-gem 'rails', '5.2.1'
+gem "rails", "~> 5.2.2"
 gem "rack", ">= 2.0.6"
 gem "nokogiri", ">= 1.8.5"
 
