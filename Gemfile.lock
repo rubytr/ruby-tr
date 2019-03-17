@@ -277,7 +277,7 @@ GEM
       thor (>= 0.19.0, < 2.0)
     rainbow (3.0.0)
     rake (12.3.2)
-    ransack (2.0.1)
+    ransack (2.1.1)
       actionpack (>= 5.0)
       activerecord (>= 5.0)
       activesupport (>= 5.0)
@@ -400,12 +400,10 @@ DEPENDENCIES
   jquery-rails-cdn
   kramdown
   meta_request (~> 0.4)
-  nokogiri (>= 1.8.5)
   omniauth
   omniauth-github
   pg (~> 0.21.0)
   puma
-  rack (>= 2.0.6)
   rails (~> 5.2.2)
   rails-controller-testing
   rails_12factor (~> 0.0.2)
