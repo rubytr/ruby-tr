@@ -237,7 +237,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     puma (3.12.0)
-    rack (2.0.7)
+    rack (2.0.8)
     rack-contrib (2.0.1)
       rack (~> 2.0)
     rack-test (1.1.0)
