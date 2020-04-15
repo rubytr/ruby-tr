@@ -31,6 +31,7 @@ gem 'omniauth-github'
 gem 'simple_form'
 gem 'slack-notifier'
 gem 'xmlrpc'
+gem 'kaminari'
 
 group :production do
   gem 'pg', '~> 0.21.0'

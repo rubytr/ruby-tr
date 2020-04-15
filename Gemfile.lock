@@ -398,6 +398,7 @@ DEPENDENCIES
   jquery-datatables-rails (~> 3.4.0)
   jquery-rails (~> 4.3)
   jquery-rails-cdn
+  kaminari
   kramdown
   meta_request (~> 0.4)
   omniauth
