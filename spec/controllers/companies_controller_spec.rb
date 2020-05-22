@@ -3,7 +3,7 @@ require 'spec_helper'
 describe CompaniesController do
   context '#index' do
     before do
-      FactoryBot.create_list :company, 10, bypass_humanizer: true
+      FactoryBot.create_list(:company, 10)
       get :index
     end
 

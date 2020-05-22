@@ -6,10 +6,6 @@ class Company < ApplicationRecord
   validates :title, :sector, :city, :url, presence: true
   validates :title, uniqueness: { case_sensitive: false }
 
-  include Humanizer
-  attr_accessor :bypass_humanizer
-  require_human_on :create, unless: :bypass_humanizer
-
   scope :published, -> { where(published: true) }
 
   def send_notification

@@ -7,6 +7,5 @@ FactoryBot.define do
       "Abidik Gubigik #{n}"
     end
     password 'some weird password'
-    bypass_humanizer true
   end
 end
