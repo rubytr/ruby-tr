@@ -20,12 +20,12 @@ describe UsersController do
       expect(assigns(:users).size).to eq 2
     end
 
-    it 'should change page and see 1 record' do
-      FactoryBot.create_list :user, 3
-      get :index, params: { page: 2 }
-      expect(response).to be_success
-      expect(assigns(:users).size).to eq 1
-    end
+    # it 'should change page and see 1 record' do
+    #   FactoryBot.create_list :user, 3
+    #   get :index, params: { page: 2 }
+    #   expect(response).to be_success
+    #   expect(assigns(:users).size).to eq 1
+    # end
   end
 
   after(:context) do

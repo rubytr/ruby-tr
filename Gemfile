@@ -4,10 +4,10 @@ ruby '2.6.0'
 
 # core
 gem 'puma'
-gem "rails", "~> 5.2.2"
+gem 'rails', '~> 5.2.2'
 
 # assets
-gem "bootstrap-sass", ">= 3.4.1"
+gem 'bootstrap-sass', '>= 3.4.1'
 gem 'bootswatch-rails'
 gem 'coffee-rails', '~> 4.2'
 gem 'font-awesome-rails', '~> 4.7'
@@ -24,14 +24,13 @@ gem 'activeadmin', '~> 1.1'
 gem 'devise'
 gem 'gravatar-ultimate', '~> 2.0.0'
 # gem 'high_voltage'
-gem 'humanizer', '~> 2.6.0'
+gem 'kaminari'
 gem 'kramdown', require: false
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'simple_form'
 gem 'slack-notifier'
 gem 'xmlrpc'
-gem 'kaminari'
 
 group :production do
   gem 'pg', '~> 0.21.0'
@@ -46,8 +45,8 @@ group :development, :test do
   gem 'guard-rspec', require: false
   gem 'guard-rubocop', require: false
   gem 'guard-spork'
-  gem 'rspec-rails'
   gem 'rails-controller-testing'
+  gem 'rspec-rails'
   gem 'shoulda'
   gem 'spork', '~> 1.0rc'
   gem 'sqlite3', '~> 1.3.8'
@@ -59,6 +58,6 @@ group :development do
   gem 'meta_request', '~> 0.4'
   # quiet_assets requires railties < 5.0, >= 3.1
   # gem 'quiet_assets', '~> 1.0.2'
-  gem 'rubocop'
+  gem 'rubocop', '~> 0.66.0'
   gem 'spring'
 end

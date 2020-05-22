@@ -3,7 +3,6 @@ class User < ApplicationRecord
 
   validates :name, presence: true
 
-  include Humanizer
   before_save :the_gravatar_url
   devise :database_authenticatable, :registerable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:github]

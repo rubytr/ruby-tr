@@ -1,0 +1,12 @@
+language: ruby
+dist: trusty
+rvm:
+  - 2.6.0
+before_install:
+  - gem install bundler
+before_script:
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate
+script:
+  - bundle exec rubocop
+  - bundle exec rspec spec

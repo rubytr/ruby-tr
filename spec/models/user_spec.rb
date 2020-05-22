@@ -7,7 +7,7 @@ describe User do
   context 'non-specific tests' do
     it { is_expected.to validate_presence_of(:name) }
     it { is_expected.to validate_presence_of(:email) }
-    it { is_expected.to validate_uniqueness_of(:email) }
+    it { is_expected.to validate_uniqueness_of(:email).case_insensitive }
   end
 
   context 'format of email' do
@@ -21,14 +21,6 @@ describe User do
     it 'should be set before save' do
       user = FactoryBot.create(:user)
       expect(user.gravatar_url).not_to be_empty
-    end
-  end
-
-  context 'humanizer' do
-    it 'should check user is human or not on create' do
-      user = FactoryBot.build(:user, bypass_humanizer: false)
-      user.save
-      expect(user.errors.full_messages).to include('Humanizer answer İnsan değilsin ey yaratık :D')
     end
   end
 end
