@@ -6,6 +6,6 @@ FactoryBot.define do
     sequence :name do |n|
       "Abidik Gubigik #{n}"
     end
-    password 'some weird password'
+    password { 'some weird password' }
   end
 end
