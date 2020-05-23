@@ -8,7 +8,7 @@ describe CompaniesController do
     end
 
     it 'should be success' do
-      expect(response).to be_success
+      expect(response).to be_successful
     end
 
     it 'should be have 10 company' do
@@ -30,7 +30,10 @@ describe CompaniesController do
     before do
       user = FactoryBot.create :user
       sign_in user
-      post :create, params: { company: { title: 'a company', sector: 'a sector', url: 'http://example.com', city: 'a city' } }
+      post :create, params: { company: { title: 'a company',
+                                         sector: 'a sector',
+                                         url: 'http://example.com',
+                                         city: 'a city' } }
     end
     it 'should be redirect to companies_path with notice flash' do
       expect(controller).to set_flash[:notice]

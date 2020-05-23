@@ -19,6 +19,7 @@ class User < ApplicationRecord
       user.github = auth.extra.raw_info.login
     end
   end
+  # rubocop:enable Metrics/AbcSize
 
   private
 

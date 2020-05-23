@@ -22,7 +22,7 @@ describe Users::RegistrationsController do
         sign_in user
         new_info = { email: 'wrong_mail_address', name: 'New name' }
         put :update, params: { user: new_info }
-        expect(response).to be_success
+        expect(response).to be_successful
       end
     end
   end
