@@ -1,5 +1,7 @@
 require 'spec_helper'
 
-describe AdminUser do
-  # pending "add some examples to (or delete) #{__FILE__}"
+RSpec.describe AdminUser, type: :model do
+  context 'validations tests' do
+    it { should have_many(:announcements) }
+  end
 end

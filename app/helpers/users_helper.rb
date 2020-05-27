@@ -7,7 +7,6 @@ module UsersHelper
     else
       "http://#{url}"
     end
-    # url.blank? ? '#' : (/^http/.match?(url) ? url : "http://#{url}")
   end
 
   def gravatar_picture(user)

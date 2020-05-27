@@ -1,6 +1,14 @@
 require 'rubygems'
 require 'spork'
 require 'devise'
+require 'simplecov'
+require 'webmock/rspec'
+
+SimpleCov.start do
+  enable_coverage :branch
+end
+
+WebMock.disable_net_connect!(allow_localhost: true)
 
 ENV["RAILS_ENV"] = 'test'
 
@@ -26,17 +34,20 @@ Spork.prefork do
     config.run_all_when_everything_filtered = true
     config.include Devise::Test::ControllerHelpers, type: :controller
 
+    config.expect_with :rspec do |c|
+      c.syntax = :expect
+    end
+
     config.before(:suite) do
       DatabaseCleaner.strategy = :transaction
       DatabaseCleaner.clean_with(:truncation)
     end
-    config.before(:all) do
-      DatabaseCleaner.start
-    end
-    config.after(:all) do
-      DatabaseCleaner.clean
-    end
 
+    config.around(:each) do |example|
+      DatabaseCleaner.cleaning do
+        example.run
+      end
+    end
   end
 end
 
