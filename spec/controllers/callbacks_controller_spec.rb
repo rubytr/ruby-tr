@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CallbacksController do
+RSpec.describe CallbacksController, type: :controller do
   context '#github' do
     # There are some omniauth magic there. Raw library code should not be tested
     it 'exists' do

@@ -19,3 +19,6 @@
 .rspec
 vendor/bundle
 .rbenv-vars
+
+# Simplecov coverage files
+/coverage

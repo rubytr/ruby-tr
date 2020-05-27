@@ -48,8 +48,10 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'shoulda', '4.0.0.rc1'
+  gem 'simplecov', require: false
   gem 'spork', '~> 1.0rc'
   gem 'sqlite3', '~> 1.3.8'
+  gem 'webmock'
 end
 
 group :development do

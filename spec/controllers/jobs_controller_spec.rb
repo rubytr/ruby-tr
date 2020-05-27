@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe JobsController, focus: true do
+RSpec.describe JobsController, type: :controller do
   # context 'post: create' do
   #   it 'should redirect to users path with correct params' do
   #     Job.any_instance.stub(:bypass_humanizer).and_return(true)

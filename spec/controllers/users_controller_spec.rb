@@ -1,31 +1,33 @@
 require 'spec_helper'
 
-describe UsersController do
+RSpec.describe UsersController, type: :controller do
   before(:context) do
     @default_per_page = Kaminari.config.default_per_page
     Kaminari.config.default_per_page = 2
   end
 
   context '#index' do
+    before do
+      FactoryBot.create_list :user, 3
+    end
+
+    # Due to problems on database_cleaner do not change the order of testing here
+    it 'should change page and see 1 record' do
+      get :index, params: { page: 2 }
+      expect(response).to be_successful
+      expect(assigns(:users).size).to eq 1
+    end
+
     it 'should be success' do
-      FactoryBot.create_list :user, rand(2..4)
       get :index
       expect(response).to be_successful
     end
 
     it 'should see 2 records' do
-      FactoryBot.create_list :user, 3
       get :index
       expect(response).to be_successful
       expect(assigns(:users).size).to eq 2
     end
-
-    # it 'should change page and see 1 record' do
-    #   FactoryBot.create_list :user, 3
-    #   get :index, params: { page: 2 }
-    #   expect(response).to be_success
-    #   expect(assigns(:users).size).to eq 1
-    # end
   end
 
   after(:context) do
