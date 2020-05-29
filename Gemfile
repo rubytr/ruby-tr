@@ -23,7 +23,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'activeadmin', '~> 1.1'
 gem 'devise'
 gem 'gravatar-ultimate', '~> 2.0.0'
-# gem 'high_voltage'
 gem 'kaminari'
 gem 'kramdown', require: false
 gem 'omniauth'
@@ -58,8 +57,6 @@ group :development do
   gem 'better_errors', '~> 2.3'
   gem 'binding_of_caller', '~> 0.7.2'
   gem 'meta_request', '~> 0.4'
-  # quiet_assets requires railties < 5.0, >= 3.1
-  # gem 'quiet_assets', '~> 1.0.2'
   gem 'rubocop', '~> 0.83.0'
   gem 'spring'
 end
