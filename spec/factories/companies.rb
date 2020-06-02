@@ -8,6 +8,6 @@ FactoryBot.define do
     github { 'http://github.com' }
     twitter { 'http://twitter.com' }
     city { 'A city' }
-    user_id { 1 }
+    user
   end
 end
