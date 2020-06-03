@@ -4,23 +4,23 @@ ruby '2.6.0'
 
 # core
 gem 'puma'
-gem 'rails', '~> 5.2.2'
+gem 'rails', '~> 6.0'
 
 # assets
 gem 'bootstrap-sass', '>= 3.4.1'
 gem 'bootswatch-rails'
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails', '~> 5.0'
 gem 'font-awesome-rails', '~> 4.7'
-gem 'jbuilder', '~> 2.7'
+gem 'jbuilder', '~> 2.10'
 gem 'jquery-datatables-rails', '~> 3.4.0'
-gem 'jquery-rails', '~> 4.3'
+gem 'jquery-rails', '~> 4.4'
 gem 'jquery-rails-cdn'
-gem 'sass-rails', '~> 5.0.0'
+gem 'sass-rails', '~> 6.0.0'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
 # rest
-gem 'activeadmin', '~> 1.1'
+gem 'activeadmin', '~> 2.4'
 gem 'devise'
 gem 'gravatar-ultimate', '~> 2.0.0'
 gem 'kaminari'
@@ -29,6 +29,7 @@ gem 'omniauth'
 gem 'omniauth-github'
 gem 'simple_form'
 gem 'slack-notifier'
+gem 'sprockets-rails', '2.3.3'
 gem 'xmlrpc'
 
 group :production do
@@ -41,7 +42,6 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker', require: false
   gem 'guard'
-  gem 'guard-rspec', require: false
   gem 'guard-rubocop', require: false
   gem 'guard-spork'
   gem 'rails-controller-testing'
@@ -49,14 +49,14 @@ group :development, :test do
   gem 'shoulda', '4.0.0.rc1'
   gem 'simplecov', require: false
   gem 'spork', '~> 1.0rc'
-  gem 'sqlite3', '~> 1.3.8'
+  gem 'sqlite3', '~> 1.4'
   gem 'webmock'
 end
 
 group :development do
   gem 'better_errors', '~> 2.3'
   gem 'binding_of_caller', '~> 0.7.2'
-  gem 'meta_request', '~> 0.4'
+  gem 'meta_request', '~> 0.7'
   gem 'rubocop', '~> 0.83.0'
   gem 'spring'
 end
