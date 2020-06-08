@@ -344,6 +344,8 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    sentry-raven (3.0.0)
+      faraday (>= 1.0)
     shellany (0.0.1)
     shoulda (4.0.0.rc1)
       shoulda-context (= 2.0.0.rc2)
@@ -429,6 +431,7 @@ DEPENDENCIES
   rspec-rails
   rubocop (~> 0.83.0)
   sass-rails (~> 6.0.0)
+  sentry-raven (~> 3.0)
   shoulda (= 4.0.0.rc1)
   simple_form
   simplecov
