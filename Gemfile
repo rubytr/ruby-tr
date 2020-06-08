@@ -27,6 +27,7 @@ gem 'kaminari'
 gem 'kramdown', require: false
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'sentry-raven', '~> 3.0'
 gem 'simple_form'
 gem 'slack-notifier'
 gem 'sprockets-rails', '2.3.3'
@@ -54,7 +55,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'better_errors', '~> 2.3'
   gem 'binding_of_caller', '~> 0.7.2'
   gem 'meta_request', '~> 0.7'
   gem 'rubocop', '~> 0.83.0'
