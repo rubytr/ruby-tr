@@ -21,7 +21,6 @@ class CompaniesController < ApplicationController
   private
 
   def company_params
-    params.require(:company).permit(:title, :sector, :url, :github, :twitter, :city,
-                                    :humanizer_answer, :humanizer_question_id)
+    params.require(:company).permit(:title, :sector, :url, :github, :twitter, :city)
   end
 end
