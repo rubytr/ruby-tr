@@ -1,7 +1,7 @@
 ---
-name: Geliştirme isteği
-about: Geliştirilmesi için bir istekte bulunun
-title: "[FEAT] - (Burayı doldurunuz)"
+name: Geliştirme İsteği
+about: Geliştirilmesi için bir istekte bulun
+title: "[GELİŞTİRME] - (Burayı doldurunuz)"
 labels: enhancement
 assignees: ''
 

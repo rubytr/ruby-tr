@@ -1,17 +1,17 @@
-# Contributing
+# Katkıda Bulunma
 
 Eğer herhangi bir hata bulduysanız ve ya bir geliştirme isteğiniz var ise lütfen
 önce [bildirimde][1] bulununuz. Bildirimde bulunacağınız konu üzerinde hali hazırda
-çalışan ve ya çalışmış kişiler olabilir. Ya da topluluk için konuşulup karara bağlanmış ve
+çalışan veya çalışmış kişiler olabilir. Ya da topluluk için konuşulup karara bağlanmış ve
 yapılmayacak bir talepte bulunuyor olabilirsiniz.
 
 ## Ana esaslar
 
-* Daha önce pek fazla Git ve open-source tecrübeniz yok ise okumanızı tavsiye ederiz.[Git üzerinde basit işlemler ve open-source'a nasıl katkı sağlarım][2](İngilizce kaynak).
+* Daha önce pek fazla Git ve açık kaynak tecrübeniz yok ise okumanızı tavsiye ederiz.[Git üzerinde basit işlemler ve açık kaynak koda nasıl katkı sağlarım][2](İngilizce kaynak).
 * Projeyi forklayın.
-* [Anlamlı commit mesajları][3](İngilizce kaynak) yazınız.
+* [Anlamlı commit mesajları][3](İngilizce kaynak) yazın.
 * Uygulama içerisinde takip edilmiş standartları uygulayın.
-* Commit and push until you are happy with your contribution.
+* Yaptığınız değişiklik içinize sinene kadar göndermeyin.
 * Yaptığınız her değişiklik için (çok ufak bile olsa) test eklemeyi unutmayın.
 * PR açmadan önce yazdığınız ve var olan testlerin geçtiğinden emin olun.
 * Yaptığınız değişikliklerin RuboCop hatası fırlatmadığından emin olun.

@@ -1,14 +1,14 @@
 ---
-name: Bug bildirimi
-about: Düzeltilmesi için bug bildiriminde bulun
-title: "[BUG] - (Burayı doldurunuz)"
+name: Hata Bildirimi
+about: Düzeltilmesi için hata bildiriminde bulun
+title: "[HATA] - (Burayı doldurunuz)"
 labels: bug
 assignees: ''
 
 ---
 
-**Bug'ın tarifi**
-Kısa ve öz bir şekilde bulduğunuz bug'ı açıklayın.
+### Hatanın tarifi
+Kısa ve öz bir şekilde bulduğunuz hatayı açıklayın.
 
 **Tekrarlamak için ne yapmalıyız?**
 Tekrarlamak için yapılacaklar:
@@ -18,7 +18,7 @@ Tekrarlamak için yapılacaklar:
 4. Hata ekrana düşecektir
 
 **Olması gereken**
-Kısa ve öz bir şekilde ne olması gerekli olduğunu açıklayın.
+Kısa ve öz bir şekilde ne olması gerektiğini açıklayın.
 
 **Ekran görüntüleri**
 Eğer probleminiz için uygunsa ekran görüntülerini buraya kopyalayın.
