@@ -51,4 +51,13 @@ RSpec.describe PagesController, type: :controller do
       expect(response).to be_successful
     end
   end
+
+  context '#code_of_conduct' do
+    it 'should read the code-of-conduct file' do
+      get :code_of_conduct
+      expect(response).to render_template('pages/code_of_conduct')
+      expect(assigns(:payload)).not_to be_nil
+      expect(response).to be_successful
+    end
+  end
 end
