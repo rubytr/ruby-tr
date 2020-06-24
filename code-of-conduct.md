@@ -13,8 +13,6 @@ Bu Davranış Kurallarının amacı, katılımcıları eylemlerimiz ve onların 
 
 Topluluklar, içinde bulundukları toplumları yansıtırlar ve toplumda var olan birçok eşitsizlik ve güç ihlallerine karşı koymak için olumlu eylemler şarttır.
 
-Topluluğumuzda sıcak, samimi ve tüm katılımcıları tam anlamıyla katkıda bulunmaya teşvik etmek için ekstra çaba harcayan birini görürseniz, bilmek isteriz.
-
 
 Beklenen Davranışlar
 -----------------
