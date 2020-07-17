@@ -47,7 +47,7 @@ group :development, :test do
   gem 'guard-spork'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
-  gem 'shoulda', '4.0.0.rc1'
+  gem 'shoulda'
   gem 'simplecov', require: false
   gem 'spork', '~> 1.0rc'
   gem 'sqlite3', '~> 1.4'
@@ -55,8 +55,8 @@ group :development, :test do
 end
 
 group :development do
-  gem 'binding_of_caller', '~> 0.7.2'
+  gem 'binding_of_caller'
   gem 'meta_request', '~> 0.7'
-  gem 'rubocop', '~> 0.83.0'
+  gem 'rubocop', '~> 0.88.0'
   gem 'spring'
 end
