@@ -3,6 +3,9 @@
     <div class="row gutter-20-xs gutter-out-xs left-lg">
       <div class="lg-2-1">&copy; <%= Time.now.year %> - Ruby Türkiye</div>
       <div class="lg-2-1 text-right">
+        <%= link_to code_of_conduct_path do %>
+          <span>Davranış Kuralları</span>
+        <% end %>
         <%= link_to "https://twitter.com/ruby_turkiye", target: "_blank" do %>
           <%= fa_icon "twitter", text: "Twitter" %>
         <% end %>

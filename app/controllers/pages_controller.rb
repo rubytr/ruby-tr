@@ -30,4 +30,8 @@ class PagesController < ApplicationController
       format.json { render json: @events }
     end
   end
+
+  def code_of_conduct
+    @payload = File.read("#{Rails.root}/code-of-conduct.md")
+  end
 end
