@@ -9,12 +9,14 @@ yapılmayacak bir talepte bulunuyor olabilirsiniz.
 
 * Daha önce pek fazla Git ve açık kaynak tecrübeniz yok ise okumanızı tavsiye ederiz. [Git üzerinde basit işlemler ve açık kaynak koda nasıl katkı sağlarım][2] (İngilizce kaynak).
 * Projeyi forklayın.
+* Proje dizinine gelerek `bundle install` komutunu çalıştırarak gerekli ruby kütüphanelerini yükleyin.
+* `rails db:create:all` ve `rails db:migrate RAILS_ENV=development` ve `rails db:migrate RAILS_ENV=test` komutlarını çalıştırarak veritabanlarını ve tabloları oluşturun.
 * [Anlamlı commit mesajları][3] (İngilizce kaynak) yazın.
 * Uygulama içerisinde takip edilmiş standartları uygulayın.
 * Yaptığınız değişiklik içinize sinene kadar göndermeyin.
 * Yaptığınız her değişiklik için (çok ufak bile olsa) test eklemeyi unutmayın.
-* PR açmadan önce yazdığınız ve var olan testlerin geçtiğinden emin olun.
-* Yaptığınız değişikliklerin RuboCop hatası fırlatmadığından emin olun.
+* PR açmadan önce yazdığınız ve var olan testlerin geçtiğinden emin olmak için `bundle exec rspec` komutunu çalıştırın.
+* Yaptığınız değişikliklerin RuboCop hatası fırlatmadığından emin olmak için `bundle exec rubocop` komutunu çalıştırın.
 * Birbirleri ile alakalı commitleri [Squash ederek PR açın][4] (İngilizce kaynak).
 
 [1]: https://github.com/rubytr/ruby-tr/issues
