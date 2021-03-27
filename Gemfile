@@ -56,7 +56,6 @@ end
 
 group :development do
   gem 'binding_of_caller'
-  gem 'meta_request', '~> 0.7'
   gem 'rubocop', '~> 0.88.0'
   gem 'spring'
 end
