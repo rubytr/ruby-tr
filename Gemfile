@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
-ruby '2.6.6'
+ruby '2.6.0'
 
 # core
 gem 'puma'
-gem 'rails', '~> 6.1.3'
+gem 'rails', '~> 6.0'
 
 # assets
 gem 'bootstrap-sass', '>= 3.4.1'
@@ -56,6 +56,7 @@ end
 
 group :development do
   gem 'binding_of_caller'
+  gem 'meta_request', '~> 0.7'
   gem 'rubocop', '~> 0.88.0'
   gem 'spring'
 end
