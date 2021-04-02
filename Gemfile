@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
-ruby '2.6.6'
+ruby '2.6.0'
 
 # core
 gem 'puma'
-gem 'rails', '~> 6.1.3'
+gem 'rails', '~> 6.0'
 
 # assets
 gem 'bootstrap-sass', '>= 3.4.1'
@@ -34,7 +34,7 @@ gem 'sprockets-rails', '2.3.3'
 gem 'xmlrpc'
 
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 0.21.0'
   gem 'rails_12factor', '~> 0.0.2'
 end
 
@@ -56,6 +56,7 @@ end
 
 group :development do
   gem 'binding_of_caller'
+  gem 'meta_request', '~> 0.7'
   gem 'rubocop', '~> 0.88.0'
   gem 'spring'
 end
