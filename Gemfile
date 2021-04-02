@@ -34,7 +34,7 @@ gem 'sprockets-rails', '2.3.3'
 gem 'xmlrpc'
 
 group :production do
-  gem 'pg', '~> 0.21.0'
+  gem 'pg'
   gem 'rails_12factor', '~> 0.0.2'
 end
 
