@@ -9,7 +9,8 @@ yapılmayacak bir talepte bulunuyor olabilirsiniz.
 
 * Daha önce pek fazla Git ve açık kaynak tecrübeniz yok ise okumanızı tavsiye ederiz. [Git üzerinde basit işlemler ve açık kaynak koda nasıl katkı sağlarım][2] (İngilizce kaynak).
 * Projeyi forklayın.
-* Proje dizinine gelerek `bundle install` komutunu çalıştırarak gerekli ruby kütüphanelerini yükleyin.
+* [RVM](https://rvm.io/rvm/install) ya da [rbenv](https://github.com/rbenv/rbenv#installation) kullanarak `ruby@2.6.6` versiyonunu bilgisayarınıza yükleyin.
+* Proje dizinine gelerek `bundle install` komutunu çalıştırın ve gerekli ruby kütüphanelerini yükleyin.
 * `rails db:create:all` ve `rails db:migrate RAILS_ENV=development` ve `rails db:migrate RAILS_ENV=test` komutlarını çalıştırarak veritabanlarını ve tabloları oluşturun.
 * [Anlamlı commit mesajları][3] (İngilizce kaynak) yazın.
 * Uygulama içerisinde takip edilmiş standartları uygulayın.
