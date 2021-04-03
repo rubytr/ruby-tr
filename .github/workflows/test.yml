@@ -12,7 +12,7 @@ jobs:
       - name: Set up ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6.0
+          ruby-version: 2.6.6
       - name: Install system dependencies
         run: sudo apt-get update && sudo apt-get -yqq install libsqlite3-dev sqlite3
       - name: Cache ruby gems
@@ -35,7 +35,7 @@ jobs:
       - name: Set up ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6.0
+          ruby-version: 2.6.6
       - name: Install system dependencies
         run: sudo apt-get update && sudo apt-get -yqq install libsqlite3-dev sqlite3
       - name: Cache ruby gems
