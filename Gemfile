@@ -1,39 +1,40 @@
 source 'https://rubygems.org'
 
-ruby '2.6.0'
+ruby '2.6.6'
 
 # core
 gem 'puma'
-gem "rails", "~> 5.2.2"
+gem 'rails', '~> 6.1.3'
 
 # assets
-gem "bootstrap-sass", ">= 3.4.1"
+gem 'bootstrap-sass', '>= 3.4.1'
 gem 'bootswatch-rails'
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails', '~> 5.0'
 gem 'font-awesome-rails', '~> 4.7'
-gem 'jbuilder', '~> 2.7'
+gem 'jbuilder', '~> 2.10'
 gem 'jquery-datatables-rails', '~> 3.4.0'
-gem 'jquery-rails', '~> 4.3'
+gem 'jquery-rails', '~> 4.4'
 gem 'jquery-rails-cdn'
-gem 'sass-rails', '~> 5.0.0'
+gem 'sass-rails', '~> 6.0.0'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
 # rest
-gem 'activeadmin', '~> 1.1'
+gem 'activeadmin', '~> 2.4'
 gem 'devise'
 gem 'gravatar-ultimate', '~> 2.0.0'
-# gem 'high_voltage'
-gem 'humanizer', '~> 2.6.0'
+gem 'kaminari'
 gem 'kramdown', require: false
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'sentry-raven', '~> 3.0'
 gem 'simple_form'
 gem 'slack-notifier'
+gem 'sprockets-rails', '2.3.3'
 gem 'xmlrpc'
 
 group :production do
-  gem 'pg', '~> 0.21.0'
+  gem 'pg'
   gem 'rails_12factor', '~> 0.0.2'
 end
 
@@ -42,22 +43,19 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker', require: false
   gem 'guard'
-  gem 'guard-rspec', require: false
   gem 'guard-rubocop', require: false
   gem 'guard-spork'
-  gem 'rspec-rails'
   gem 'rails-controller-testing'
+  gem 'rspec-rails'
   gem 'shoulda'
+  gem 'simplecov', require: false
   gem 'spork', '~> 1.0rc'
-  gem 'sqlite3', '~> 1.3.8'
+  gem 'sqlite3', '~> 1.4'
+  gem 'webmock'
 end
 
 group :development do
-  gem 'better_errors', '~> 2.3'
-  gem 'binding_of_caller', '~> 0.7.2'
-  gem 'meta_request', '~> 0.4'
-  # quiet_assets requires railties < 5.0, >= 3.1
-  # gem 'quiet_assets', '~> 1.0.2'
-  gem 'rubocop'
+  gem 'binding_of_caller'
+  gem 'rubocop', '~> 0.88.0'
   gem 'spring'
 end

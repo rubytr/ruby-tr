@@ -1,24 +1,22 @@
 AllCops:
   Exclude:
     - 'bin/*'
-    - 'bundle/**/*'
     - 'config/**/*'
-    - 'db/migrate/*.rb'
-    - 'db/schema.rb'
+    - 'db/**/*'
     - 'spec/spec_helper.rb'
-    - 'test/test_helper.rb'
     - 'tmp/**/*'
-    - 'vendor/bundle/**/*'
+    - 'vendor/**/*'
     - 'Guardfile'
-  Include:
-    - '**/Rakefile'
-    - '**/config.ru'
-    - '**/Gemfile'
-Metrics/LineLength:
+  NewCops: enable
+Layout/LineLength:
   Max: 100
 Metrics/BlockLength:
   ExcludedMethods: ['describe', 'context', 'feature']
-Style/FrozenStringLiteralComment:
+Metrics/MethodLength:
+  Max: 15
+Style/AsciiComments:
   Enabled: false
-Documentation:
+Style/Documentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
   Enabled: false

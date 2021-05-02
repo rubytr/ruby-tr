@@ -1,6 +1,14 @@
 require 'rubygems'
 require 'spork'
 require 'devise'
+require 'simplecov'
+require 'webmock/rspec'
+
+SimpleCov.start do
+  enable_coverage :branch
+end
+
+WebMock.disable_net_connect!(allow_localhost: true)
 
 ENV["RAILS_ENV"] = 'test'
 
@@ -26,23 +34,35 @@ Spork.prefork do
     config.run_all_when_everything_filtered = true
     config.include Devise::Test::ControllerHelpers, type: :controller
 
+    config.expect_with :rspec do |c|
+      c.syntax = :expect
+    end
+
     config.before(:suite) do
       DatabaseCleaner.strategy = :transaction
       DatabaseCleaner.clean_with(:truncation)
     end
-    config.before(:all) do
+
+    config.before(:each) do
       DatabaseCleaner.start
     end
-    config.after(:all) do
+
+    config.after(:each) do
       DatabaseCleaner.clean
     end
-
   end
 end
 
 Spork.each_run do
   RubyTr::Application.reload_routes!
   FactoryBot.definition_file_paths = [File.join(Rails.root, 'spec', 'factories')]
+end
+
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
 end
 
 def setup_devise

@@ -16,6 +16,10 @@
 /tmp
 .DS_Store
 .idea/
+.generators
 .rspec
 vendor/bundle
 .rbenv-vars
+
+# Simplecov coverage files
+/coverage
