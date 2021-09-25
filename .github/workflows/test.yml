@@ -9,46 +9,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Install system dependencies
+        run: sudo apt-get update && sudo apt-get -yqq install libsqlite3-dev sqlite3
       - name: Set up ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.6.6
-      - name: Install system dependencies
-        run: sudo apt-get update && sudo apt-get -yqq install libsqlite3-dev sqlite3
-      - name: Cache ruby gems
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-ruby-gems
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ env.cache-name }}-
-      - name: Install dependencies
-        run: bundle install --jobs 4 --retry 3 --deployment
+          bundler-cache: true
       - name: Run
         run: bundle exec rubocop
   Rspec:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Install system dependencies
+        run: sudo apt-get update && sudo apt-get -yqq install libsqlite3-dev sqlite3
       - name: Set up ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.6.6
-      - name: Install system dependencies
-        run: sudo apt-get update && sudo apt-get -yqq install libsqlite3-dev sqlite3
-      - name: Cache ruby gems
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-ruby-gems
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ env.cache-name }}-
-      - name: Install dependencies
-        run: bundle install --jobs 4 --retry 3 --deployment
+          bundler-cache: true
       - name: Prepare test database
         run: bundle exec rails db:test:prepare
       - name: Run
