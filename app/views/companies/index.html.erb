@@ -15,7 +15,7 @@
         <%= fa_icon "plus-square", text: "Yeni firma ekle" %>
       <% end %>
     <% else %>
-      <%= link_to user_github_omniauth_authorize_path, class: 'btn btn-github' do %>
+      <%= link_to user_github_omniauth_authorize_path, class: 'btn btn-github', method: :post do %>
         <%= fa_icon "github", text: "Yeni firma eklemek için GitHub ile giriş yapın" %>
       <% end %>
     <% end %>
