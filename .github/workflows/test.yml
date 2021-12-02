@@ -1,35 +1,45 @@
 name: Test
 
-on:
-  pull_request:
-    branches: [ master ]
+# 1. Run on every push
+# 2. Show commit title
+on: push
 
 jobs:
   Rubocop:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2
+
       - name: Install system dependencies
         run: sudo apt-get update && sudo apt-get -yqq install libsqlite3-dev sqlite3
+
       - name: Set up ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6.6
+          ruby-version: 2.7.5
           bundler-cache: true
+
       - name: Run
         run: bundle exec rubocop
+
   Rspec:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2
+
       - name: Install system dependencies
         run: sudo apt-get update && sudo apt-get -yqq install libsqlite3-dev sqlite3
+
       - name: Set up ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6.6
+          ruby-version: 2.7.5
           bundler-cache: true
+
       - name: Prepare test database
         run: bundle exec rails db:test:prepare
+
       - name: Run
         run: bundle exec rspec
