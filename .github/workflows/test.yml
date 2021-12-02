@@ -14,7 +14,7 @@ jobs:
       - name: Set up ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6.6
+          ruby-version: 2.7.5
           bundler-cache: true
       - name: Run
         run: bundle exec rubocop
@@ -27,7 +27,7 @@ jobs:
       - name: Set up ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6.6
+          ruby-version: 2.7.5
           bundler-cache: true
       - name: Prepare test database
         run: bundle exec rails db:test:prepare
