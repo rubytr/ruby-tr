@@ -26,8 +26,8 @@ tr:
       unlock_instructions:
         subject: 'Kilitli hesap açma adımları'
     omniauth_callbacks:
-      success: 'Successfully authorized from %{kind} account.'
-      failure: 'Could not authorize you from %{kind} because "%{reason}".'
+      success: '%{kind} ile başarıyla giriş yapıldı.'
+      failure: '%{kind} ile giriş yaparken bir hata meydana geldi. Hata: "%{reason}".'
     passwords:
       no_token: "Bu sayfaya şifre sıfırlama emailinden gelmeniz gerekmektedir. Eğer emailden geliyorsanız, lütfen verilen adresi tam ve eksiksiz olarak giriniz."
       send_instructions: 'Şifrenizi sıfırlamak için gereken adımlar birkaç dakika içinde size email ile gönderilecektir.'
