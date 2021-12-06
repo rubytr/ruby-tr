@@ -9,5 +9,5 @@ Bu repo [Ruby Türkiye][website] sitesinin kaynak kodunu barındırmaktadır.
 
 Ruby Türkiye sitesine katkıda bulunmak için [Katkıda Bulunma Rehberi][contributing]'ni inceleyebilirsiniz.
 
-[contributing]: https://github.com/rubytr/ruby-tr/blob/master/CONTRIBUTING.md
+[contributing]: https://github.com/rubytr/ruby-tr/blob/main/CONTRIBUTING.md
 [website]:      https://rubyturkiye.org/
