@@ -3,9 +3,7 @@
     <div class="xs-1 left-lg">
       <div class="page-header">
         <h2>Firmalar</h2>
-        <% if flash[:notice] %>
-          <div class="notice"><%= flash[:notice] %></div>
-        <% end %>
+        <%= render "shared/notice" %>
       </div>
     </div>
   </div>
@@ -15,7 +13,7 @@
         <%= fa_icon "plus-square", text: "Yeni firma ekle" %>
       <% end %>
     <% else %>
-      <%= link_to user_github_omniauth_authorize_path, class: 'btn btn-github' do %>
+      <%= link_to user_github_omniauth_authorize_path, class: 'btn btn-github', method: :post do %>
         <%= fa_icon "github", text: "Yeni firma eklemek için GitHub ile giriş yapın" %>
       <% end %>
     <% end %>
