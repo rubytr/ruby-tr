@@ -4,8 +4,6 @@ require 'net/http'
 require 'json'
 
 class PagesController < ApplicationController
-  def group; end
-
   def irc; end
 
   def main

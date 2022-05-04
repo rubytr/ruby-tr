@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root 'pages#main'
   get '/irc', to: 'pages#irc'
-  get '/group', to: 'pages#group'
   get '/events', to: 'pages#events'
   devise_for :users, controllers: { omniauth_callbacks: 'callbacks',
                                     registrations:      'users/registrations',
