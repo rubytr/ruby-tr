@@ -12,11 +12,6 @@
             <% end %>
           </div>
           <div>
-            <%= link_to "/group" do %>
-              <%= fa_icon "envelope", text: "Mail Grubu" %>
-            <% end %>
-          </div>
-          <div>
             <%= link_to companies_path do %>
               <%= fa_icon "building", text: "Firmalar" %>
             <% end %>
@@ -25,6 +20,11 @@
           <%= link_to "https://slack.rubyturkiye.org/", target: "_blank" do %>
             <%= fa_icon "slack", text: "Slack" %>
           <% end %>
+          </div>
+          <div>
+            <%= link_to "https://discuss.rubyturkiye.org/", target: "_blank" do %>
+              <%= fa_icon "discourse", text: "Discourse" %>
+            <% end %>
           </div>
           <% if current_user %>
             <div class="lg-5-1">
