@@ -18,8 +18,7 @@ class PagesController < ApplicationController
     http.use_ssl = true
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
-    request = Net::HTTP::Get.new(url)
-    response = http.request(request)
+    response = http.request(Net::HTTP::Get.new(url))
 
     @events = JSON.parse(response.read_body)
 

@@ -1,9 +1,5 @@
 module Users
   class RegistrationsController < Devise::RegistrationsController
-    def edit
-      super # We want to test this behavior coming from devise.
-    end
-
     def update
       self.resource = resource_class.to_adapter.get!(send(:"current_#{resource_name}").to_key)
       updated = update_resource(resource, account_update_params)
