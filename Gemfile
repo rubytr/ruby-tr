@@ -56,6 +56,6 @@ end
 
 group :development do
   gem 'binding_of_caller', git: 'https://github.com/walski/binding_of_caller.git', branch: 'ruby-3'
-  gem 'rubocop', '~> 0.88.0'
+  gem 'rubocop'
   gem 'spring'
 end
