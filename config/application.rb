@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 module RubyTr
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.0
+    config.load_defaults 7.0
 
     # Configuration for the application, engines, and railties goes here.
     #
@@ -18,7 +18,5 @@ module RubyTr
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-
-    config.i18n.default_locale = :tr
   end
 end
