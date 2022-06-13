@@ -2,7 +2,11 @@ name: Test
 
 # 1. Run on every push
 # 2. Show commit title
-on: push
+on:
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
   Rubocop:
