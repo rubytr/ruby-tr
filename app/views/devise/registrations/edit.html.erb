@@ -5,7 +5,7 @@
         <h2>Profilini Düzenle</h2>
         <%= render "shared/notice" %>
         <%= link_to destroy_user_session_path, method: :delete, class: "btn btn-github" do %>
-          <i class="fa fa-github"></i> Çıkış Yap
+          <i class="fab fa-github"></i> Çıkış Yap
         <% end %>
       </div>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
