@@ -6,12 +6,12 @@
     <h3><%= user.name %></h3>
     <% unless user.twitter.blank? %>
       <%= link_to twitter_url(user), class: "link", target: "blank", title: "Twitter" do %>
-        <i class="fa fa-twitter fa-2x"></i>
+        <i class="fab fa-twitter fa-2x"></i>
       <% end %>
     <% end %>
     <% unless user.github.blank? %>
       <%= link_to github_url(user), class: "link", target: "blank", title: "Github" do %>
-        <i class="fa fa-github  fa-2x"></i>
+        <i class="fab fa-github fa-2x"></i>
       <% end %>
     <% end %>
     <% unless user.web.blank? %>

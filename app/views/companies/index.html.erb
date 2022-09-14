@@ -14,7 +14,7 @@
       <% end %>
     <% else %>
       <%= link_to user_github_omniauth_authorize_path, class: 'btn btn-github', method: :post do %>
-        <%= fa_icon "github", text: "Yeni firma eklemek için GitHub ile giriş yapın" %>
+        <%= fab_icon "github", text: "Yeni firma eklemek için GitHub ile giriş yapın" %>
       <% end %>
     <% end %>
   </div>
@@ -37,10 +37,10 @@
           <td>
             <%= link_to fa_icon("globe"), "http://#{company.url}", target: "_blank" %>
             <% if company.github.present? %>
-              <%= link_to fa_icon("github"), "http://github.com/#{company.github}", target: "_blank" %>
+              <%= link_to fab_icon("github"), "http://github.com/#{company.github}", target: "_blank" %>
             <% end %>
             <% if company.twitter.present? %>
-              <%= link_to fa_icon("twitter"), "http://twitter.com/#{company.twitter}", target: "_blank" %>
+              <%= link_to fab_icon("twitter"), "http://twitter.com/#{company.twitter}", target: "_blank" %>
             <% end %>
           </td>
         </tr>
