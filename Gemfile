@@ -27,6 +27,7 @@ gem 'kaminari'
 gem 'kramdown', require: false
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'omniauth-rails_csrf_protection'
 gem 'sentry-raven', '~> 3.0'
 gem 'simple_form'
 gem 'slack-notifier'
