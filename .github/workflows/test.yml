@@ -39,7 +39,7 @@ jobs:
       - name: Set up ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.0.4
+          ruby-version: 3.2.1
           bundler-cache: true
 
       - name: Prepare test database

@@ -4,7 +4,7 @@ RSpec.describe PagesController, type: :controller do
   context '#main' do
     before do
       admin_user = FactoryBot.build(:admin_user)
-      FactoryBot.create_list :announcement, 5, admin_user: admin_user
+      FactoryBot.create_list :announcement, 5, admin_user:
     end
 
     it 'should redirect root to pages/main' do

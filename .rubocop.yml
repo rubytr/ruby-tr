@@ -12,7 +12,7 @@ AllCops:
 Layout/LineLength:
   Max: 100
 Metrics/BlockLength:
-  ExcludedMethods: ['describe', 'context', 'feature']
+  IgnoredMethods: ['describe', 'context', 'feature']
 Metrics/MethodLength:
   Max: 15
 Style/AsciiComments:
