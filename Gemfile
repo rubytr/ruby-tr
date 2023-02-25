@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '~> 3.0.0'
+ruby '~> 3.2.1'
 
 # core
 gem 'puma'
