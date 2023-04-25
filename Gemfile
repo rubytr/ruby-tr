@@ -4,7 +4,7 @@ ruby '~> 3.2.1'
 
 # core
 gem 'puma'
-gem 'rails', '~> 7.0.4.2'
+gem 'rails', '~> 7.0.4.3'
 
 # assets
 gem 'bootstrap-sass', '>= 3.4.1'
