@@ -20,7 +20,7 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
 # rest
-gem 'activeadmin', '~> 2.4'
+gem 'activeadmin', '~> 3.2'
 gem 'devise'
 gem 'gravatar-ultimate', '~> 2.0.0'
 gem 'kaminari'
