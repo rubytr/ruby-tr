@@ -27,7 +27,7 @@ RSpec.describe PagesController, type: :controller do
                          'local_time' => '20:00',
                          'waitlist_count' => 0,
                          'yes_rsvp_count' => 50,
-                         'link' => 'https://www.meetup.com/Ruby-Turkiye/events/21312932/',
+                         'link' => '#',
                          'description' => '<p>Bu etkinliği kaçırmayın.</p> ',
                          'how_to_find_us' => 'https://www.youtube.com/watch?v=jNQXAC9IVRw',
                          'visibility' => 'public',
