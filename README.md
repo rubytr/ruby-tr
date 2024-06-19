@@ -1,7 +1,6 @@
 # [![Ruby Türkiye](./public/ruby_turkiye.png)][website]
 
 ![](https://github.com/rubytr/ruby-tr/workflows/Test/badge.svg)
-![](https://github.com/rubytr/ruby-tr/workflows/Deployment/badge.svg)
 
 Bu repo [Ruby Türkiye][website] sitesinin kaynak kodunu barındırmaktadır.
 
