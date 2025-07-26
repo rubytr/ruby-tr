@@ -35,10 +35,13 @@
 
         <a class="btn btn-green" href="https://groups.google.com/forum/#!forum/ruby-tr"><i class="fa fa-envelope"></i> Mail Listemize Kaydolun!</a>
       </aside>
-      <aside style="margin-top: 10px">
+      <aside style="margin-top: 10px; display: flex; flex-flow: column; align-items: center; padding-bottom: 15px;">
         <h3>Topluluk Destekçileri</h3>
         <%= link_to "https://friendlyrb.com", target: "_blank", rel: "nofollow" do %>
           <%= image_tag "image.png", width: 200 %>
+        <% end %>
+        <%= link_to "https://rubyconf.at/", target: "_blank", rel: "nofollow" do %>
+          <%= image_tag "rubyconf-at.jpeg", width: 100 %>
         <% end %>
       </aside>
     </div>
